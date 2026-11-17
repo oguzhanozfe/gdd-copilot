@@ -1,0 +1,7 @@
+- shapez is a low-stakes factory building game all about the automation of shapes production [[S1318690-about1: "shapez is a low-stakes factory building game all about the automation of shapes production"]]
+- With no enemies, timers or resource limits to worry about, shapez allows factory building at your own pace [[S1318690-about2: "With no enemies, timers or resource limits to worry about, shapez is a game that allows you to take on factory building at your own pace"]]
+- Stardew Valley lets players turn an overgrown field into a lively farm, raise animals, grow crops, and craft useful machines [[S413150-about2: "Turn your overgrown field into a lively farm! Raise animals, grow crops, start an orchard, craft useful machines"]]
+- Factorio requires players to defend factories against enemies while building industrial infrastructure [[S427520-about1: "fighting enemies... you will have to be prepared to defend yourself and your machine empire"]]
+- Dorfromantik released in April 2022 as a casual indie simulation strategy title priced at $13.99 [[S1455840-facts: "Release date: Apr 28, 2022. Price on the US store: $13.99. Genres: Casual, Indie, Simulation, Strategy"]]
+- Proposal: Our game should adopt shapez's no-enemies, no-timers philosophy while adding Stardew Valley's crop-growing and community-restoration loop.
+- Open question: How does Dorfromantik's tile-placement progression compare to factory automation progression for player retention?

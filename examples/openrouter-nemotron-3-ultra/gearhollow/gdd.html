@@ -1,0 +1,109 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gearhollow (example GDD)</title><style>
+:root{--fg:#1b1b1b;--muted:#5d5d5d;--bad:#b3261e;--badbg:#fdecea;--line:#ddd}
+body{font:16px/1.55 Georgia,serif;color:var(--fg);background:#fff;max-width:46rem;margin:2rem auto;padding:0 1rem}
+h1{font-size:1.9rem;margin-bottom:.2rem}h2{border-bottom:1px solid var(--line);padding-bottom:.2rem;margin-top:2rem}
+blockquote{color:var(--muted);border-left:3px solid var(--line);margin:0;padding-left:1rem}
+sup a{text-decoration:none;font-size:.75em}.proposal{color:#244b8a}.question{color:#6b4a00}
+.flag{background:var(--badbg);border-bottom:2px solid var(--bad)}.flag small{color:var(--bad);font-family:sans-serif}
+ol.sources{font-size:.85rem;color:var(--muted)}ol.sources q{color:var(--fg)}
+.ok{background:#e8f5e9;border-bottom:2px solid #2e7d32}
+.legend,.summary{font:.8rem sans-serif;color:var(--muted)}.summary{font-size:.9rem;color:var(--fg)}
+@media print{body{margin:0;max-width:none;font-size:11pt}a{color:inherit}h2{break-after:avoid}li{break-inside:avoid}}
+</style></head><body><p class="legend">Green = claim whose quoted citation the checker verified. Red = claim it could not verify. Blue = proposal (design opinion). Brown = open question.</p><p class="summary"><b>Citation check:</b> 13 of 22 claims have valid citations (59%); 9 proposals, 9 open questions, 8 proposals/questions name a reference game without a quote.</p><h1>Gearhollow (example GDD)</h1>
+<h2>Pitch</h2>
+<blockquote>A cozy automation game for relaxed players. You restore a sleepy mountain village by building small clockwork factories that grow crops, mill flour and deliver goods, with no combat and no fail state.</blockquote>
+<h2>Core loop</h2>
+<ul>
+<li><span class="flag">shapez offers a low-stakes factory loop where players extract shapes, build production lines, and unlock new buildings as shapes grow more complex, all without enemies, timers, or resource limits <sup><a href="#src1" title="low-stakes factory building game all about the automation of shapes production">[1]</a></sup>. <small>[low_overlap]</small></span></li>
+<li><span class="ok" title="citation verified">Stardew Valley structures its core loop around turning an overgrown field into a lively farm by growing crops, raising animals, crafting machines, and leveling five skills to unlock recipes and areas <sup><a href="#src2" title="Turn your overgrown field into a lively farm">[2]</a></sup>.</span></li>
+<li><span class="flag">Dorfromantik blends strategy and puzzle mechanics into a relaxing loop of placing tiles to create idyllic village scenery with a creative mode that imposes no limits <sup><a href="#src3" title="Unique mix of strategy and puzzle mechanics Relaxing and calming gameplay Idyllic village scenery">[3]</a></sup>. <small>[low_overlap]</small></span></li>
+<li><span class="proposal">Proposal: The core loop centers on restoring the mountain village by placing clockwork factories that automatically grow crops, mill flour, and deliver goods to villagers, with each completed delivery unlocking new blueprints and village upgrades.</span></li>
+<li><span class="proposal">Proposal: Players expand by connecting factories with conveyor belts and gear trains, optimizing layouts at their own pace since there are no fail states, combat, or time pressure.</span></li>
+<li><span class="question">Open question: How should the game balance increasing recipe complexity against the cozy pacing so that automation puzzles remain satisfying without becoming tedious?</span></li>
+<li><span class="proposal">Proposal: A gentle progression meta-loop ties factory output to visible village revival — new NPCs arrive, festivals unlock, and scenery changes — giving players a calm, visual sense of advancement.</span></li>
+</ul>
+<h2>Target player</h2>
+<ul>
+<li><span class="flag">FACT: shapez is described as a &quot;low-stakes factory building game&quot; for automating shapes [[S1318690-about1]] <small>[missing_quote]</small></span></li>
+<li><span class="flag">FACT: shapez offers &quot;no enemies, timers or resource limits to worry about&quot; for self-paced factory building [[S1318690-about2]] <small>[missing_quote]</small></span></li>
+<li><span class="flag">FACT: Stardew Valley invites players to &quot;turn your overgrown field into a lively farm&quot; with crafting machines [[S413150-about2]] <small>[missing_quote]</small></span></li>
+<li><span class="flag">FACT: Factorio involves &quot;automating production and fighting enemies&quot; in a factory-building sandbox [[S427520-about1]] <small>[missing_quote]</small></span></li>
+<li><span class="flag">FACT: The Gearhollow team mandates &quot;no combat and no fail state; players should never lose a factory&quot; [[N-gearhollow-4]] <small>[missing_quote]</small></span></li>
+<li><span class="proposal">Proposal: The target player wants solo, stress-free automation with cozy village restoration and no fail states.</span></li>
+<li><span class="question">Open question: What is the market size for players who enjoy both Stardew Valley&#x27;s coziness and shapez&#x27;s automation depth?</span></li>
+</ul>
+<h2>Reference games</h2>
+<ul>
+<li><span class="ok" title="citation verified">shapez is a low-stakes factory building game all about the automation of shapes production <sup><a href="#src4" title="shapez is a low-stakes factory building game all about the automation of shapes production">[4]</a></sup></span></li>
+<li><span class="ok" title="citation verified">With no enemies, timers or resource limits to worry about, shapez allows factory building at your own pace <sup><a href="#src5" title="With no enemies, timers or resource limits to worry about, shapez is a game that allows you to take on factory building at your own pace">[5]</a></sup></span></li>
+<li><span class="ok" title="citation verified">Stardew Valley lets players turn an overgrown field into a lively farm, raise animals, grow crops, and craft useful machines <sup><a href="#src6" title="Turn your overgrown field into a lively farm! Raise animals, grow crops, start an orchard, craft useful machines">[6]</a></sup></span></li>
+<li><span class="flag">Factorio requires players to defend factories against enemies while building industrial infrastructure <sup><a href="#src7" title="fighting enemies... you will have to be prepared to defend yourself and your machine empire">[7]</a></sup> <small>[quote_not_found]</small></span></li>
+<li><span class="ok" title="citation verified">Dorfromantik released in April 2022 as a casual indie simulation strategy title priced at $13.99 <sup><a href="#src8" title="Release date: Apr 28, 2022. Price on the US store: $13.99. Genres: Casual, Indie, Simulation, Strategy">[8]</a></sup></span></li>
+<li><span class="proposal">Proposal: Our game should adopt shapez&#x27;s no-enemies, no-timers philosophy while adding Stardew Valley&#x27;s crop-growing and community-restoration loop.</span></li>
+<li><span class="question">Open question: How does Dorfromantik&#x27;s tile-placement progression compare to factory automation progression for player retention?</span></li>
+</ul>
+<h2>Monetization</h2>
+<ul>
+<li><span class="ok" title="citation verified">shapez launched at $9.99 with two DLC listed on Steam <sup><a href="#src9" title="Price on the US store: $9.99">[9]</a></sup></span></li>
+<li><span class="ok" title="citation verified">Dorfromantik launched at $13.99 with three DLC listed on Steam <sup><a href="#src10" title="Price on the US store: $13.99">[10]</a></sup></span></li>
+<li><span class="ok" title="citation verified">Stardew Valley launched at $14.99 with one DLC listed on Steam <sup><a href="#src11" title="Price on the US store: $14.99">[11]</a></sup></span></li>
+<li><span class="flag">Factorio launched at $35.00 and states no plans to take part in a sale or reduce the price <sup><a href="#src12" title="We don&#x27;t have any plans to take part in a sale or to reduce the price">[12]</a></sup> <small>[number_mismatch]</small></span></li>
+<li><span class="proposal">Proposal: Set a premium launch price between $14.99 and $19.99 to align with cozy simulation peers like Dorfromantik and Stardew Valley.</span></li>
+<li><span class="proposal">Proposal: Deliver seasonal village festivals as free content updates to maintain goodwill and player retention.</span></li>
+<li><span class="question">Open question: Whether to develop paid expansions or rely solely on the base game and free updates for long-term revenue.</span></li>
+</ul>
+<h2>Risks</h2>
+<ul>
+<li><span class="ok" title="citation verified">Established cozy automation games like shapez offer factory building with no enemies, timers or resource limits. <sup><a href="#src13" title="no enemies, timers or resource limits">[13]</a></sup></span></li>
+<li><span class="ok" title="citation verified">Factorio requires players to defend factories against enemies, a design risk this project explicitly avoids. <sup><a href="#src14" title="defend yourself and your machine empire">[14]</a></sup></span></li>
+<li><span class="ok" title="citation verified">The development team consists of five people who have shipped one small puzzle game before. <sup><a href="#src15" title="The team is five people">[15]</a></sup></span></li>
+<li><span class="proposal">Proposal: Add optional challenge modes similar to Dorfromantik&#x27;s hard mode to engage optimization-focused players without breaking cozy appeal.</span></li>
+<li><span class="question">Open question: Whether the complete absence of fail states will reduce long-term retention for players seeking mastery.</span></li>
+<li><span class="ok" title="citation verified">Dorfromantik provides a creative mode with no limits and customizable rulesets for varied playstyles. <sup><a href="#src16" title="build your own landscape with no limits">[16]</a></sup></span></li>
+</ul>
+<h2>Open questions</h2>
+<ul>
+<li><span class="ok" title="citation verified">The team wants no combat and no fail state; players should never lose a factory. <sup><a href="#src17" title="The team wants no combat and no fail state; players should never lose a factory.">[17]</a></sup></span></li>
+<li><span class="question">Open question: How can progression milestones be structured to maintain engagement without any threat of failure?</span></li>
+<li><span class="question">Open question: Should the game support multiplayer cooperation similar to Stardew Valley&#x27;s shared farm or Dorfromantik&#x27;s creative mode?</span></li>
+<li><span class="question">Open question: What level of automation complexity will preserve a cozy low-stakes feel while avoiding the pressure of games like Factorio?</span></li>
+<li><span class="question">Open question: Given a five-person team with one prior puzzle game, what art style and content scope are feasible for a polished release?</span></li>
+<li><span class="proposal">Proposal: Consider a creative mode with no resource limits to maximize relaxation, inspired by Dorfromantik&#x27;s creative mode.</span></li>
+</ul>
+<p class="legend">Generated by gdd-copilot with openrouter/nvidia/nemotron-3-ultra-550b-a55b:free (6 calls, 10285 prompt + 11439 completion tokens) on 2026-11-17 in 181s.</p><h2>Sources</h2><ol class="sources"><li id="src1"><code>S1318690-about1</code>: <q>low-stakes factory building game all about the automation of shapes production</q> (Steam store page data: shapez, <a href="https://store.steampowered.com/app/1318690/">https://store.steampowered.com/app/1318690/</a>, retrieved 2026-11-17)</li>
+<li id="src2"><code>S413150-about2</code>: <q>Turn your overgrown field into a lively farm</q> (Steam store page data: Stardew Valley, <a href="https://store.steampowered.com/app/413150/">https://store.steampowered.com/app/413150/</a>, retrieved 2026-11-17)</li>
+<li id="src3"><code>S1455840-about3</code>: <q>Unique mix of strategy and puzzle mechanics Relaxing and calming gameplay Idyllic village scenery</q> (Steam store page data: Dorfromantik, <a href="https://store.steampowered.com/app/1455840/">https://store.steampowered.com/app/1455840/</a>, retrieved 2026-11-17)</li>
+<li id="src4"><code>S1318690-about1</code>: <q>shapez is a low-stakes factory building game all about the automation of shapes production</q> (Steam store page data: shapez, <a href="https://store.steampowered.com/app/1318690/">https://store.steampowered.com/app/1318690/</a>, retrieved 2026-11-17)</li>
+<li id="src5"><code>S1318690-about2</code>: <q>With no enemies, timers or resource limits to worry about, shapez is a game that allows you to take on factory building at your own pace</q> (Steam store page data: shapez, <a href="https://store.steampowered.com/app/1318690/">https://store.steampowered.com/app/1318690/</a>, retrieved 2026-11-17)</li>
+<li id="src6"><code>S413150-about2</code>: <q>Turn your overgrown field into a lively farm! Raise animals, grow crops, start an orchard, craft useful machines</q> (Steam store page data: Stardew Valley, <a href="https://store.steampowered.com/app/413150/">https://store.steampowered.com/app/413150/</a>, retrieved 2026-11-17)</li>
+<li id="src7"><code>S427520-about1</code>: <q>fighting enemies... you will have to be prepared to defend yourself and your machine empire</q> (Steam store page data: Factorio, <a href="https://store.steampowered.com/app/427520/">https://store.steampowered.com/app/427520/</a>, retrieved 2026-11-17)</li>
+<li id="src8"><code>S1455840-facts</code>: <q>Release date: Apr 28, 2022. Price on the US store: $13.99. Genres: Casual, Indie, Simulation, Strategy</q> (Steam store page data: Dorfromantik, <a href="https://store.steampowered.com/api/appdetails?appids=1455840&amp;l=english&amp;cc=us">https://store.steampowered.com/api/appdetails?appids=1455840&amp;l=english&amp;cc=us</a>, retrieved 2026-11-17)</li>
+<li id="src9"><code>S1318690-facts</code>: <q>Price on the US store: $9.99</q> (Steam store page data: shapez, <a href="https://store.steampowered.com/api/appdetails?appids=1318690&amp;l=english&amp;cc=us">https://store.steampowered.com/api/appdetails?appids=1318690&amp;l=english&amp;cc=us</a>, retrieved 2026-11-17)</li>
+<li id="src10"><code>S1455840-facts</code>: <q>Price on the US store: $13.99</q> (Steam store page data: Dorfromantik, <a href="https://store.steampowered.com/api/appdetails?appids=1455840&amp;l=english&amp;cc=us">https://store.steampowered.com/api/appdetails?appids=1455840&amp;l=english&amp;cc=us</a>, retrieved 2026-11-17)</li>
+<li id="src11"><code>S413150-facts</code>: <q>Price on the US store: $14.99</q> (Steam store page data: Stardew Valley, <a href="https://store.steampowered.com/api/appdetails?appids=413150&amp;l=english&amp;cc=us">https://store.steampowered.com/api/appdetails?appids=413150&amp;l=english&amp;cc=us</a>, retrieved 2026-11-17)</li>
+<li id="src12"><code>S427520-about1</code>: <q>We don&#x27;t have any plans to take part in a sale or to reduce the price</q> (Steam store page data: Factorio, <a href="https://store.steampowered.com/app/427520/">https://store.steampowered.com/app/427520/</a>, retrieved 2026-11-17)</li>
+<li id="src13"><code>S1318690-about2</code>: <q>no enemies, timers or resource limits</q> (Steam store page data: shapez, <a href="https://store.steampowered.com/app/1318690/">https://store.steampowered.com/app/1318690/</a>, retrieved 2026-11-17)</li>
+<li id="src14"><code>S427520-about1</code>: <q>defend yourself and your machine empire</q> (Steam store page data: Factorio, <a href="https://store.steampowered.com/app/427520/">https://store.steampowered.com/app/427520/</a>, retrieved 2026-11-17)</li>
+<li id="src15"><code>N-gearhollow-2</code>: <q>The team is five people</q> (User notes: gearhollow.md)</li>
+<li id="src16"><code>S1455840-about7</code>: <q>build your own landscape with no limits</q> (Steam store page data: Dorfromantik, <a href="https://store.steampowered.com/app/1455840/">https://store.steampowered.com/app/1455840/</a>, retrieved 2026-11-17)</li>
+<li id="src17"><code>N-gearhollow-4</code>: <q>The team wants no combat and no fail state; players should never lose a factory.</q> (User notes: gearhollow.md)</li></ol><h2>Citation check</h2>
+<p class="summary"><b>Citation check:</b> 13 of 22 claims have valid citations (59%); 9 proposals, 9 open questions, 8 proposals/questions name a reference game without a quote.</p>
+<ul>
+<li>line 9 <b>low_overlap</b> content-word overlap 0.43 &lt; 0.5: shapez offers a low-stakes factory loop where players extract shapes, build production lines, and unlock new buildings as shapes grow more complex, all without enemies, timers, or resource limits .</li>
+<li>line 11 <b>low_overlap</b> content-word overlap 0.44 &lt; 0.5: Dorfromantik blends strategy and puzzle mechanics into a relaxing loop of placing tiles to create idyllic village scenery with a creative mode that imposes no limits .</li>
+<li>line 19 <b>missing_quote</b> citation without a quoted span: FACT: shapez is described as a &quot;low-stakes factory building game&quot; for automating shapes</li>
+<li>line 20 <b>missing_quote</b> citation without a quoted span: FACT: shapez offers &quot;no enemies, timers or resource limits to worry about&quot; for self-paced factory building</li>
+<li>line 21 <b>missing_quote</b> citation without a quoted span: FACT: Stardew Valley invites players to &quot;turn your overgrown field into a lively farm&quot; with crafting machines</li>
+<li>line 22 <b>missing_quote</b> citation without a quoted span: FACT: Factorio involves &quot;automating production and fighting enemies&quot; in a factory-building sandbox</li>
+<li>line 23 <b>missing_quote</b> citation without a quoted span: FACT: The Gearhollow team mandates &quot;no combat and no fail state; players should never lose a factory&quot;</li>
+<li>line 25 <b>warn_uncited_reference</b> names Stardew Valley without a quoted citation: Open question: What is the market size for players who enjoy both Stardew Valley&#x27;s coziness and shapez&#x27;s automation depth?</li>
+<li>line 32 <b>quote_not_found</b> quote not in S427520-about1: Factorio requires players to defend factories against enemies while building industrial infrastructure</li>
+<li>line 34 <b>warn_uncited_reference</b> names Stardew Valley without a quoted citation: Proposal: Our game should adopt shapez&#x27;s no-enemies, no-timers philosophy while adding Stardew Valley&#x27;s crop-growing and community-restoration loop.</li>
+<li>line 35 <b>warn_uncited_reference</b> names Dorfromantik without a quoted citation: Open question: How does Dorfromantik&#x27;s tile-placement progression compare to factory automation progression for player retention?</li>
+<li>line 42 <b>number_mismatch</b> numbers not in cited chunks: [&#x27;35.00&#x27;]: Factorio launched at $35.00 and states no plans to take part in a sale or reduce the price</li>
+<li>line 43 <b>warn_uncited_reference</b> names Stardew Valley without a quoted citation: Proposal: Set a premium launch price between $14.99 and $19.99 to align with cozy simulation peers like Dorfromantik and Stardew Valley.</li>
+<li>line 52 <b>warn_uncited_reference</b> names Dorfromantik without a quoted citation: Proposal: Add optional challenge modes similar to Dorfromantik&#x27;s hard mode to engage optimization-focused players without breaking cozy appeal.</li>
+<li>line 60 <b>warn_uncited_reference</b> names Stardew Valley without a quoted citation: Open question: Should the game support multiplayer cooperation similar to Stardew Valley&#x27;s shared farm or Dorfromantik&#x27;s creative mode?</li>
+<li>line 61 <b>warn_uncited_reference</b> names Factorio without a quoted citation: Open question: What level of automation complexity will preserve a cozy low-stakes feel while avoiding the pressure of games like Factorio?</li>
+<li>line 63 <b>warn_uncited_reference</b> names Dorfromantik without a quoted citation: Proposal: Consider a creative mode with no resource limits to maximize relaxation, inspired by Dorfromantik&#x27;s creative mode.</li>
+</ul></body></html>

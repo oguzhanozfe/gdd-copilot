@@ -1,0 +1,7 @@
+- FACT: shapez is described as a "low-stakes factory building game" for automating shapes [[S1318690-about1]]
+- FACT: shapez offers "no enemies, timers or resource limits to worry about" for self-paced factory building [[S1318690-about2]]
+- FACT: Stardew Valley invites players to "turn your overgrown field into a lively farm" with crafting machines [[S413150-about2]]
+- FACT: Factorio involves "automating production and fighting enemies" in a factory-building sandbox [[S427520-about1]]
+- FACT: The Gearhollow team mandates "no combat and no fail state; players should never lose a factory" [[N-gearhollow-4]]
+- Proposal: The target player wants solo, stress-free automation with cozy village restoration and no fail states.
+- Open question: What is the market size for players who enjoy both Stardew Valley's coziness and shapez's automation depth?

@@ -1,0 +1,6 @@
+- Established cozy automation games like shapez offer factory building with no enemies, timers or resource limits. [[S1318690-about2: "no enemies, timers or resource limits"]]
+- Factorio requires players to defend factories against enemies, a design risk this project explicitly avoids. [[S427520-about1: "defend yourself and your machine empire"]]
+- The development team consists of five people who have shipped one small puzzle game before. [[N-gearhollow-2: "The team is five people"]]
+- Proposal: Add optional challenge modes similar to Dorfromantik's hard mode to engage optimization-focused players without breaking cozy appeal.
+- Open question: Whether the complete absence of fail states will reduce long-term retention for players seeking mastery.
+- Dorfromantik provides a creative mode with no limits and customizable rulesets for varied playstyles. [[S1455840-about7: "build your own landscape with no limits"]]

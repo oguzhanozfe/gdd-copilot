@@ -221,10 +221,11 @@ class DemoTests(unittest.TestCase):
         with TemporaryDirectory() as tmp, mock.patch.dict(os.environ, {"GDD_PROVIDER": "replay"}), \
                 redirect_stdout(StringIO()):
             cli.main(["demo", "--out", tmp])
-            for name in ("tidebound", "gearhollow"):
-                got = (Path(tmp) / name / "gdd.raw.md").read_text()
-                want = (cli.RECORDED / name / "gdd.raw.md").read_text()
-                self.assertEqual(got, want)
+            runs = sorted(d.parent for d in cli.EXAMPLES.glob("*/*/recorded"))
+            self.assertGreaterEqual(len(runs), 2)
+            for rec in runs:
+                got = (Path(tmp) / rec.relative_to(cli.EXAMPLES) / "gdd.raw.md").read_text()
+                self.assertEqual(got, (rec / "gdd.raw.md").read_text())
             self.assertIn("gdd.html", (Path(tmp) / "index.html").read_text())
 
 

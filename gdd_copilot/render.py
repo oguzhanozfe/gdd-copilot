@@ -82,6 +82,8 @@ def to_html(md: str, chunks: list[Chunk], results: list[Result], title: str) -> 
         if s.startswith("#"):
             level = len(s) - len(s.lstrip("#"))
             body.append(f"<h{level}>{esc(s.lstrip('#').strip())}</h{level}>")
+        elif s.startswith("<!--"):  # provenance footer: which model wrote this GDD, and when
+            body.append(f'<p class="legend">{esc(s.strip("<!-> ").capitalize())}.</p>')
         elif s.startswith(">"):
             body.append(f"<blockquote>{esc(s[1:].strip())}</blockquote>")
         else:

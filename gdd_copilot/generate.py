@@ -6,6 +6,7 @@ import json
 import os
 import re
 import time
+import urllib.error
 import urllib.request
 from pathlib import Path
 from typing import Callable
@@ -41,15 +42,17 @@ PROVIDERS = {
     "gemini": ("https://generativelanguage.googleapis.com/v1beta/openai", "GEMINI_API_KEY", "gemini-3.5-flash"),
     "deepseek": ("https://api.deepseek.com/v1", "DEEPSEEK_API_KEY", "deepseek-chat"),
     "openai": (os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1"), "OPENAI_API_KEY", "gpt-4o-mini"),
+    "openrouter": ("https://openrouter.ai/api/v1", "OPENROUTER_API_KEY", "nvidia/nemotron-3-ultra-550b-a55b:free"),
     "ollama": (None, None, "qwen3.5:9b"),
 }
+CLOUD = ("gemini", "deepseek", "openrouter")  # auto-picked in this order when their key is set
 USAGE = {"prompt_tokens": 0, "completion_tokens": 0, "calls": 0}
 
 
 def provider() -> tuple[str, str]:
     """GDD_PROVIDER wins; otherwise the first cloud key found in the environment; else Ollama."""
     name = os.environ.get("GDD_PROVIDER") or next(
-        (p for p in ("gemini", "deepseek") if os.environ.get(PROVIDERS[p][1])), "ollama")
+        (p for p in CLOUD if os.environ.get(PROVIDERS[p][1])), "ollama")
     return name, os.environ.get("GDD_MODEL", PROVIDERS[name][2])
 
 
@@ -67,7 +70,7 @@ def resolve_mode() -> str:
     """Demo order: GDD_PROVIDER if set; cloud key; local Ollama with the model; else 'replay'."""
     if os.environ.get("GDD_PROVIDER"):
         return os.environ["GDD_PROVIDER"]
-    for p in ("gemini", "deepseek"):
+    for p in CLOUD:
         if os.environ.get(PROVIDERS[p][1]):
             return p
     return "ollama" if ollama_has(os.environ.get("GDD_MODEL", PROVIDERS["ollama"][2])) else "replay"
@@ -138,6 +141,8 @@ def with_retry(llm: Callable[[str, str], str], tries: int = 3) -> Callable[[str,
         for i in range(tries):
             try:
                 return llm(system, user)
+            except urllib.error.HTTPError:  # 4xx/5xx answers (429 quota, 402 balance): never loop on them
+                raise
             except (TimeoutError, OSError):
                 if i == tries - 1:
                     raise

@@ -1,0 +1,7 @@
+- shapez launched at $9.99 with two DLC listed on Steam [[S1318690-facts: "Price on the US store: $9.99"]]
+- Dorfromantik launched at $13.99 with three DLC listed on Steam [[S1455840-facts: "Price on the US store: $13.99"]]
+- Stardew Valley launched at $14.99 with one DLC listed on Steam [[S413150-facts: "Price on the US store: $14.99"]]
+- Factorio launched at $35.00 and states no plans to take part in a sale or reduce the price [[S427520-about1: "We don't have any plans to take part in a sale or to reduce the price"]]
+- Proposal: Set a premium launch price between $14.99 and $19.99 to align with cozy simulation peers like Dorfromantik and Stardew Valley.
+- Proposal: Deliver seasonal village festivals as free content updates to maintain goodwill and player retention.
+- Open question: Whether to develop paid expansions or rely solely on the base game and free updates for long-term revenue.

@@ -7,20 +7,23 @@ but they must be labelled `Proposal:`.
 
 ## Try it
 
-**Live examples (no install):** <https://oguzhanozfe.github.io/gdd-copilot/>. Two generated GDDs as
-printable HTML, with verified claims in green, unverified claims in red and the citation-check report at
-the bottom of each page.
+**Live examples (no install):** <https://oguzhanozfe.github.io/gdd-copilot/>. Three generated GDDs as
+printable HTML, each labelled with the model that wrote it: Gearhollow by a cloud model
+(`nvidia/nemotron-3-ultra-550b-a55b:free` on OpenRouter), and Tidebound and Gearhollow by a local
+`qwen3.5:9b`. Verified claims are green, unverified claims red, and the citation-check report is at the
+bottom of each page.
 
-[![Tidebound GDD with verified citations highlighted](docs/screenshot.png)](https://oguzhanozfe.github.io/gdd-copilot/tidebound/gdd.html)
+[![Gearhollow GDD (nemotron-3-ultra via OpenRouter) with verified claims in green and unverified claims in red](docs/screenshot.png)](https://oguzhanozfe.github.io/gdd-copilot/openrouter-nemotron-3-ultra/gearhollow/gdd.html)
 
 ```bash
 python -m gdd_copilot demo        # no API key, no dependencies; writes demo-out/index.html
 ```
 
-`demo` builds both bundled pitches from the committed Steam snapshots and runs the citation checker. It
-picks the model automatically: a cloud key in the environment (`GEMINI_API_KEY`, `DEEPSEEK_API_KEY`),
+`demo` builds the bundled pitches from the committed Steam snapshots and runs the citation checker. It
+picks the model automatically: a cloud key in the environment (`GEMINI_API_KEY`, `DEEPSEEK_API_KEY`,
+`OPENROUTER_API_KEY`),
 else a local Ollama that has `qwen3.5:9b` (or `GDD_MODEL`), else **replay** of the recorded responses in
-`examples/ollama-qwen3.5-9b/*/recorded/`. It prints which one it used, e.g.
+`examples/<model>/<pitch>/recorded/` (all three runs). It prints which one it used, e.g.
 `mode: replay (recorded qwen3.5:9b, 2026-11-17)`. If a live call fails (quota, timeout), that section is
 replayed and the run says so. Replay reproduces the committed `gdd.raw.md` files exactly, and CI checks that.
 Keys are optional; see [Run it](#run-it) to use a real model.
@@ -70,35 +73,42 @@ Python 3.10+, no dependencies.
 
 ```bash
 python -m unittest discover -s tests -v                      # offline tests
-python -m gdd_copilot demo                                   # both pitches, best available model or replay
+python -m gdd_copilot demo                                   # best available model, or replay of all recorded runs
 python -m gdd_copilot check pitches/tidebound.json --out examples/ollama-qwen3.5-9b/tidebound   # re-check a committed GDD
 python -m gdd_copilot bench examples/ollama-qwen3.5-9b/*/gdd.raw.md                              # planted-claim benchmark (no model calls)
 ```
 
 Generating a new GDD needs a model. The provider is picked in this order: `GDD_PROVIDER` if
-set, else Gemini when `GEMINI_API_KEY` is set, else DeepSeek when `DEEPSEEK_API_KEY` is set,
-else a local Ollama at `OLLAMA_HOST` (default `http://127.0.0.1:11434`). `GDD_MODEL` overrides
+set, else Gemini when `GEMINI_API_KEY` is set, else DeepSeek when `DEEPSEEK_API_KEY` is set, else OpenRouter when
+`OPENROUTER_API_KEY` is set (default model `nvidia/nemotron-3-ultra-550b-a55b:free`), else a local Ollama at `OLLAMA_HOST` (default `http://127.0.0.1:11434`). `GDD_MODEL` overrides
 the model; `GDD_PROVIDER=openai` with `OPENAI_API_KEY` / `OPENAI_BASE_URL` works for any
 OpenAI-compatible endpoint.
 
 ```bash
 GDD_PROVIDER=ollama GDD_MODEL=qwen3.5:9b python -m gdd_copilot generate pitches/tidebound.json --out out/tidebound
+GDD_PROVIDER=openrouter python -m gdd_copilot generate pitches/gearhollow.json --out out/gearhollow
 python -m gdd_copilot fetch 646570 2379780     # refresh Steam snapshots (network)
 ```
 
 A pitch file is JSON: `title`, `pitch`, `refs` (Steam app ids) and `notes` (Markdown paths).
 Each finished section is cached under `<out>/.cache/`, so a rerun after a timeout only
-repeats the missing sections.
+repeats the missing sections. HTTP errors such as 429 (quota) are not retried.
 
 ## Results
 
 All numbers below come from files committed in `examples/`.
 
-**Which model produced what.** Both committed GDDs were generated on 2026-11-17 by
-`qwen3.5:9b` (Q4_K_M, Ollama digest `56671c2ab938`) running locally; the model and digest are
-also recorded at the bottom of each `gdd.raw.md`. Cloud runs (Gemini `gemma-4-31b-it` and
-`gemini-3.5-flash-lite`) were attempted the same day but could not complete. The shared
-free-tier quota returned 429/503, and DeepSeek had no balance. No cloud output is committed.
+**Which model produced what.** All three GDDs were generated on 2026-11-17, and the model is
+recorded at the bottom of each `gdd.raw.md` and shown on each HTML page:
+
+- `examples/ollama-qwen3.5-9b/{tidebound,gearhollow}`: `qwen3.5:9b` (Q4_K_M, Ollama digest
+  `56671c2ab938`) running locally.
+- `examples/openrouter-nemotron-3-ultra/gearhollow`: `nvidia/nemotron-3-ultra-550b-a55b:free` on
+  OpenRouter's free tier (6 calls, 10,285 prompt + 11,439 completion tokens). Only one pitch was run on
+  it to stay inside the shared daily free-tier cap.
+
+Earlier cloud attempts the same day (Gemini `gemma-4-31b-it`, `gemini-3.5-flash-lite`) returned
+429/503 on the shared free-tier quota, and DeepSeek had no balance, so they are not included.
 
 ### 1. Share of claims with valid citations (real runs)
 
@@ -106,15 +116,25 @@ free-tier quota returned 429/503, and DeepSeek had no balance. No cloud output i
 | --- | --- | --- | --- | --- | --- | --- |
 | [Tidebound](examples/ollama-qwen3.5-9b/tidebound/check.md) (roguelike deckbuilder) | 9 | 7 | 78% | 2 × missing_quote | 12 | 11 |
 | [Gearhollow](examples/ollama-qwen3.5-9b/gearhollow/check.md) (cozy automation) | 16 | 5 | 31% | 11 × missing_quote | 9 | 11 |
-| Both | 25 | 12 | 48% | 13 × missing_quote | 21 | 22 |
+| qwen3.5:9b, both | 25 | 12 | 48% | 13 × missing_quote | 21 | 22 |
+| [Gearhollow, nemotron-3-ultra](examples/openrouter-nemotron-3-ultra/gearhollow/check.md) | 22 | 13 | 59% | 5 × missing_quote, 2 × low_overlap, 1 × quote_not_found, 1 × number_mismatch | 9 | 9 |
 
-Every failure in these runs is the same one: the 9B model wrote `[[S427520-about1]]` without
+The two Gearhollow rows use the same pitch, corpus and prompts, so they compare the models directly
+(one run each, so treat the gap as indicative).
+
+Every qwen3.5:9b failure is the same one: the 9B model wrote `[[S427520-about1]]` without
 the quoted span. No quote was fabricated, and no wrong id was cited. The model mostly avoided
 facts by writing proposals and questions, and 17 of those name a reference game without
 evidence (the `non_claim_warnings` field in `check.json`).
 
-**Is "supported" actually right?** One person read all 12 supported claims against their
-sources ([manual-audit.md](examples/manual-audit.md)): 11 were faithful. The miss says Slay the
+The larger cloud model stated more facts and made more kinds of mistakes, which the checker caught:
+a "quote" spliced from two places with "..." (`quote_not_found`), "Factorio launched at $35.00"
+citing a chunk that has no price (`number_mismatch`; the price is in a different chunk, and "launched
+at" is not supported anyway), and five `FACT:` bullets that put the id after the quote instead of
+inside the citation (`missing_quote`).
+
+**Is "supported" actually right?** One person read the 12 supported qwen3.5:9b claims against
+their sources (the 13 nemotron claims are not audited) ([manual-audit.md](examples/manual-audit.md)): 11 were faithful. The miss says Slay the
 Spire cost $24.99 "when it released". The chunk has the current price and the release date as
 separate facts, and the checker can't tell the difference.
 
@@ -157,8 +177,8 @@ model errors.
   answers; no attempt was made to work around the refusal.
 - **Store text is marketing copy.** Facts like "Over 220 cards" are what the publisher says
   on the store page, cited as such, not independently verified.
-- **Small model, small sample.** Two GDDs from one 9B local model. The citation share will
-  differ by model; rerun `generate` with another `GDD_MODEL` to compare.
+- **Small sample.** Three GDDs from two models, one run each. The citation share differs by model
+  (31% vs 59% on the same Gearhollow pitch); rerun `generate` with another `GDD_MODEL` to compare.
 - **Team notes are examples.** `corpus/notes/*.md` were written for this repo to stand in for
   a real team's notes; they contain project constraints, not market data.
 - The number check ignores units. "$24.99" and "24.99 hours" look the same to it.
@@ -169,7 +189,8 @@ model errors.
 gdd_copilot/   fetch.py corpus.py generate.py check.py render.py bench.py __main__.py
 corpus/        steam/<appid>.json snapshots, notes/*.md
 pitches/       tidebound.json gearhollow.json
-examples/      ollama-qwen3.5-9b/<pitch>/{gdd.raw.md,gdd.md,gdd.html,check.md,check.json,recorded/}
+examples/      <model>/<pitch>/{gdd.raw.md,gdd.md,gdd.html,check.md,check.json,recorded/}
+               (ollama-qwen3.5-9b: tidebound, gearhollow; openrouter-nemotron-3-ultra: gearhollow)
                bench-planted-claims.json manual-audit.md
 tests/         offline unittest suite
 docs/          README screenshot (the Pages site is built by .github/workflows/pages.yml from `demo`)

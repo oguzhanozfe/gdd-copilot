@@ -1,0 +1,6 @@
+- The team wants no combat and no fail state; players should never lose a factory. [[N-gearhollow-4: "The team wants no combat and no fail state; players should never lose a factory."]]
+- Open question: How can progression milestones be structured to maintain engagement without any threat of failure?
+- Open question: Should the game support multiplayer cooperation similar to Stardew Valley's shared farm or Dorfromantik's creative mode?
+- Open question: What level of automation complexity will preserve a cozy low-stakes feel while avoiding the pressure of games like Factorio?
+- Open question: Given a five-person team with one prior puzzle game, what art style and content scope are feasible for a polished release?
+- Proposal: Consider a creative mode with no resource limits to maximize relaxation, inspired by Dorfromantik's creative mode.
