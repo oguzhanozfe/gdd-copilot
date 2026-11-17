@@ -1,0 +1,47 @@
+{
+  "appid": 1102190,
+  "retrieved_at": "2026-11-17T01:00:32+00:00",
+  "sources": {
+    "appdetails": "https://store.steampowered.com/api/appdetails?appids=1102190&l=english&cc=us",
+    "appreviews": null
+  },
+  "store_url": "https://store.steampowered.com/app/1102190/",
+  "details": {
+    "name": "Monster Train",
+    "short_description": "Monster Train is a strategic roguelike deck building game with a twist. Set on a train to hell, you’ll use tactical decision making to defend multiple vertical battlegrounds. With real time competitive multiplayer and endless replayability, Monster Train is always on time.",
+    "about_the_game": "Hell has frozen over. Only you can protect the final burning pyre from the forces of heaven and restore the inferno. Monster Train brings a new strategic layer to roguelike deck building, with three vertical play fields to defend.\nVisit powerful locations\nTo take back hell, you’ll need to power up. Choose your route carefully, different locations give different benefits; upgrade your champion, recruit powerful units, upgrade cards, gain passive bonuses or duplicate any card in your deck.\nStrategize to fit your playstyle\nWith five clans to choose from, each has its own unique and surprising gameplay. Pick your primary and supporting clan to gain access to all cards from both. During your run you will be able to improve cards by mixing and matching upgrades to open up new roads to victory. You can even duplicate your favourite card at special map nodes before facing off against the final boss. No playthrough is ever the same\nYou’ll never play the same deck twice!\nOver 220 cards, build up your deck from 10 different starterdecks\n5 monster clans with each very different gameplay\nEach clan has 10 levels to unlock, bringing new cards to your deck\nUpgrade your clan specific champion multiple times\nMod support through Steam Workshop\nUpgrade any card twice\nMore than 21 unique random events\n25 covenant (difficulty) levels\nMultiplayer\nHELL RUSH\nIn the Hell Rush multiplayer mode, eight players compete in a frantic real time contest. Each player has the same resources and opponents to create a level playing field. With the clock ticking it’s a test of who can make the best decisions under pressure. Only a true speed demon can remain undefeated.\nDAILY CHALLENGE\nTake on a new challenge every day with a hugely modified run due to gameplay mutators. Compete globally and against friends, and climb the leaderboards with a skill-focused scoring system.\nCUSTOM CHALLENGE\nDesign your own unique challenge and share it with friends. Each custom challenge has its own leaderboard so you can send your friends straight to hell. Content updates\nFRIENDS & FOES UPDATE\nThe exiled champions have returned to the fold to battle the forces of heaven.\nThis second major update for Monster Train adds new champions, new bosses, new cards, and new artifacts, which combine together to add a significant amount of new strategic options and replayability. We’ve also added a number of frequently requested player features like a personal run records page in the Logbook, an enemy wave counter in battle, and a preview of the ring 3 and ring 6 bosses at the start of a run.\nWILD MUTATIONS UPDATE\nThis content updates the train tracks with 35 new mutators, new difficulty settings for experienced players and new simple ways to challenge friends and community.\nHERZAL'S WORKSHOP UPDATE\nMod support!",
+    "developers": [
+      "Shiny Shoe"
+    ],
+    "publishers": [
+      "Good Shepherd Entertainment"
+    ],
+    "release_date": "May 21, 2020",
+    "is_free": false,
+    "price": "$24.99",
+    "genres": [
+      "Strategy"
+    ],
+    "categories": [
+      "Single-player",
+      "Multi-player",
+      "PvP",
+      "Online PvP",
+      "Steam Achievements",
+      "Full controller support",
+      "Steam Trading Cards",
+      "Steam Cloud",
+      "Remote Play on Phone",
+      "Remote Play on Tablet",
+      "Family Sharing"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "metacritic": 86,
+    "recommendations": 19999,
+    "dlc_count": 2
+  },
+  "reviews": null,
+  "reviews_note": "appreviews endpoint did not return data at retrieval time"
+}

@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tidebound (example GDD)</title><style>
+:root{--fg:#1b1b1b;--muted:#5d5d5d;--bad:#b3261e;--badbg:#fdecea;--line:#ddd}
+body{font:16px/1.55 Georgia,serif;color:var(--fg);background:#fff;max-width:46rem;margin:2rem auto;padding:0 1rem}
+h1{font-size:1.9rem;margin-bottom:.2rem}h2{border-bottom:1px solid var(--line);padding-bottom:.2rem;margin-top:2rem}
+blockquote{color:var(--muted);border-left:3px solid var(--line);margin:0;padding-left:1rem}
+sup a{text-decoration:none;font-size:.75em}.proposal{color:#244b8a}.question{color:#6b4a00}
+.flag{background:var(--badbg);border-bottom:2px solid var(--bad)}.flag small{color:var(--bad);font-family:sans-serif}
+ol.sources{font-size:.85rem;color:var(--muted)}ol.sources q{color:var(--fg)}
+.legend{font:.8rem sans-serif;color:var(--muted)}
+@media print{body{margin:0;max-width:none;font-size:11pt}a{color:inherit}h2{break-after:avoid}li{break-inside:avoid}}
+</style></head><body><p class="legend">Blue = proposal (design opinion). Brown = open question. Red underline = claim the citation checker could not verify.</p><h1>Tidebound (example GDD)</h1>
+<h2>Pitch</h2>
+<blockquote>A single-player roguelike deckbuilder set on a drowned coastline. Each run you sail between islands, build a deck of tide-themed cards, and fight sea creatures on a board that floods and drains every few turns, changing which cards you can play.</blockquote>
+<h2>Core loop</h2>
+<ul>
+<li>The core loop must revolve around the tide mechanic where the board floods and drains every few turns, changing which cards are playable <sup><a href="#src1" title="the board floods and drains every few turns, changing which cards are playable.">[1]</a></sup>.</li>
+<li><span class="proposal">Proposal: Players will sail between islands to craft a unique deck of tide-themed cards that adapt to the shifting water levels.</span></li>
+<li><span class="question">Open question: How can we balance the flood/drain cycle so it doesn&#x27;t disrupt the flow state described in similar games like Balatro? <sup><a href="#src2" title="prepare to enter the ultimate roguelike flow state.">[2]</a></sup>.</span></li>
+<li><span class="proposal">Proposal: We will include over 220 cards across multiple starter decks to ensure no playthrough is ever the same as Monster Train does. <sup><a href="#src3" title="Over 220 cards, build up your deck from 10 different starterdecks.">[3]</a></sup>.</span></li>
+<li><span class="question">Open question: Should we implement daily climbs or mysterious events like Slay the Spire to encourage replayability? <sup><a href="#src4" title="50+ mysterious events that can help or harm you.">[4]</a></sup>.</span></li>
+</ul>
+<h2>Target player</h2>
+<ul>
+<li>The designer wants the tide mechanic to be the one thing reviewers remember: the board floods and drains every few turns, changing which cards are playable. <sup><a href="#src5" title="the board floods and drains every few turns">[5]</a></sup></li>
+<li><span class="proposal">Proposal: We will focus on a single-player experience where players craft a unique deck to encounter bizarre creatures and discover relics of immense power.</span></li>
+<li><span class="question">Open question: How can we balance the dynamic tide mechanic with the need for deep stat tracking without overwhelming new players?</span></li>
+<li><span class="proposal">Proposal: The game should offer adjustable text sizes and full controller support to match the accessibility standards set by successful single-player deckbuilders. <sup><a href="#src6" title="Full controller support">[6]</a></sup></span></li>
+<li><span class="question">Open question: What is the optimal number of starter decks needed to provide variety without diluting the core tide-themed gameplay loop?</span></li>
+<li><span class="proposal">Proposal: We will include an in-depth stats screen allowing players to study their best hands and most used cards after every single run.</span></li>
+</ul>
+<h2>Reference games</h2>
+<ul>
+<li>Slay the Spire fused card games and roguelikes together to make the best single player deckbuilder we could. <sup><a href="#src7" title="We fused card games and roguelikes together to make the best single player deckbuilder we could.">[7]</a></sup></li>
+<li>Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos. <sup><a href="#src8" title="Balatro: The poker roguelike. Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.">[8]</a></sup></li>
+<li>Monster Train features over 220 cards, build up your deck from 10 different starterdecks 5 monster clans with each very different gameplay. <sup><a href="#src9" title="Over 220 cards, build up your deck from 10 different starterdecks 5 monster clans with each very different gameplay">[9]</a></sup></li>
+<li><span class="proposal">Proposal: The new game will replace the static board of Slay the Spire with a flooded coastline where tiles become unusable when submerged.</span></li>
+<li><span class="question">Open question: How can we implement a tide mechanic that changes card availability without making the player feel punished for failing to adapt quickly enough?</span></li>
+</ul>
+<h2>Monetization</h2>
+<ul>
+<li>Slay the Spire was priced at $24.99 on the US store when it released on Jan 23, 2019. <sup><a href="#src10" title="Price on the US store: $24.99">[10]</a></sup></li>
+<li><span class="proposal">Proposal: We will price Tidebound at $19.99 to match Inscryption&#x27;s accessible indie strategy tier while maintaining high perceived value.</span></li>
+<li><span class="question">Open question: How many DLC expansions should we plan for given that Monster Train lists 2 DLCs and Balatro lists only 1?</span></li>
+<li>The designer wants the tide mechanic to be the one thing reviewers remember because it changes which cards are playable every few turns. <sup><a href="#src11" title="the board floods and drains every few turns, changing which cards are playable">[11]</a></sup></li>
+<li><span class="proposal">Proposal: We will include Steam Achievements and Steam Cloud support to align with standard features found in Slay the Spire and Monster Train.</span></li>
+<li><span class="question">Open question: Should we implement a Steam Workshop for user-generated tide mechanics or card sets like Slay the Spire offers?</span></li>
+</ul>
+<h2>Risks</h2>
+<ul>
+<li><span class="flag">The designer wants the tide mechanic to be the one thing reviewers remember: the board floods and drains every few turns, changing which cards are playable [[N-tidebound-7]]. <small>[missing_quote]</small></span></li>
+<li><span class="proposal">Proposal: We must ensure our dynamic flooding system offers enough variety so players do not feel repetitive after multiple runs.</span></li>
+<li><span class="question">Open question: How many unique card interactions can we support before the deck-building depth feels shallow compared to Slay the Spire&#x27;s 350+ fully implemented cards [[S646570-about3]].</span></li>
+<li><span class="proposal">Proposal: We should include a distinctive psychedelic world and synthwave soundtrack to help players enter an ultimate roguelike flow state like Balatro [[S2379780-about5]].</span></li>
+<li><span class="question">Open question: Can we implement the tide mechanic without requiring timed input, ensuring accessibility for players who use Playable without Timed Input options found in Slay the Spire [[S646570-features]].</span></li>
+</ul>
+<h2>Open questions</h2>
+<ul>
+<li><span class="flag">The designer wants the tide mechanic to be the one thing reviewers remember: the board floods and drains every few turns, changing which cards are playable [[N-tidebound-7]]. <small>[missing_quote]</small></span></li>
+<li><span class="proposal">Proposal: We will focus on a single-player experience similar to Slay the Spire where we fused card games and roguelikes together to make the best single player deckbuilder we could [[S646570-short]].</span></li>
+<li><span class="question">Open question: Should we include multiplayer or PvP modes given that Monster Train offers Single-player, Multi-player, PvP, Online PvP options while our pitch emphasizes a single-player run? [[S1102190-features]]</span></li>
+<li><span class="proposal">Proposal: We will limit the launch scope to PC on Steam as Balatro allows players to immerse themselves in its distinctive psychedelic world and improve their collection with every single run [[N-tidebound-4]].</span></li>
+<li><span class="question">Open question: How do we balance the number of starter decks against the desire for a hypnotically satisfying deckbuilder where you play illegal poker hands and discover game-changing jokers? [[S2379780-short]]</span></li>
+</ul>
+<p>&lt;!-- generated by gdd-copilot with qwen3.5:9b digest 56671c2ab938 on 2026-11-17 in 129s --&gt;</p><h2>Sources</h2><ol class="sources"><li id="src1"><code>N-tidebound-7</code>: <q>the board floods and drains every few turns, changing which cards are playable.</q> (User notes: tidebound.md)</li>
+<li id="src2"><code>S2379780-about5</code>: <q>prepare to enter the ultimate roguelike flow state.</q> (Steam store page data: Balatro, <a href="https://store.steampowered.com/app/2379780/">https://store.steampowered.com/app/2379780/</a>, retrieved 2026-11-17)</li>
+<li id="src3"><code>S1102190-about3</code>: <q>Over 220 cards, build up your deck from 10 different starterdecks.</q> (Steam store page data: Monster Train, <a href="https://store.steampowered.com/app/1102190/">https://store.steampowered.com/app/1102190/</a>, retrieved 2026-11-17)</li>
+<li id="src4"><code>S646570-about4</code>: <q>50+ mysterious events that can help or harm you.</q> (Steam store page data: Slay the Spire, <a href="https://store.steampowered.com/app/646570/">https://store.steampowered.com/app/646570/</a>, retrieved 2026-11-17)</li>
+<li id="src5"><code>N-tidebound-7</code>: <q>the board floods and drains every few turns</q> (User notes: tidebound.md)</li>
+<li id="src6"><code>S646570-features</code>: <q>Full controller support</q> (Steam store page data: Slay the Spire, <a href="https://store.steampowered.com/api/appdetails?appids=646570&amp;l=english&amp;cc=us">https://store.steampowered.com/api/appdetails?appids=646570&amp;l=english&amp;cc=us</a>, retrieved 2026-11-17)</li>
+<li id="src7"><code>S646570-short</code>: <q>We fused card games and roguelikes together to make the best single player deckbuilder we could.</q> (Steam store page data: Slay the Spire, <a href="https://store.steampowered.com/app/646570/">https://store.steampowered.com/app/646570/</a>, retrieved 2026-11-17)</li>
+<li id="src8"><code>S2379780-short</code>: <q>Balatro: The poker roguelike. Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.</q> (Steam store page data: Balatro, <a href="https://store.steampowered.com/app/2379780/">https://store.steampowered.com/app/2379780/</a>, retrieved 2026-11-17)</li>
+<li id="src9"><code>S1102190-about3</code>: <q>Over 220 cards, build up your deck from 10 different starterdecks 5 monster clans with each very different gameplay</q> (Steam store page data: Monster Train, <a href="https://store.steampowered.com/app/1102190/">https://store.steampowered.com/app/1102190/</a>, retrieved 2026-11-17)</li>
+<li id="src10"><code>S646570-facts</code>: <q>Price on the US store: $24.99</q> (Steam store page data: Slay the Spire, <a href="https://store.steampowered.com/api/appdetails?appids=646570&amp;l=english&amp;cc=us">https://store.steampowered.com/api/appdetails?appids=646570&amp;l=english&amp;cc=us</a>, retrieved 2026-11-17)</li>
+<li id="src11"><code>N-tidebound-7</code>: <q>the board floods and drains every few turns, changing which cards are playable</q> (User notes: tidebound.md)</li></ol></body></html>

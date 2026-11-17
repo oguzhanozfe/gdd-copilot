@@ -1,0 +1,6 @@
+{
+  "title": "Tidebound (example GDD)",
+  "pitch": "A single-player roguelike deckbuilder set on a drowned coastline. Each run you sail between islands, build a deck of tide-themed cards, and fight sea creatures on a board that floods and drains every few turns, changing which cards you can play.",
+  "refs": [646570, 2379780, 1102190, 1092790],
+  "notes": ["corpus/notes/tidebound.md"]
+}

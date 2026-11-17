@@ -1,0 +1,47 @@
+{
+  "appid": 1455840,
+  "retrieved_at": "2026-11-17T01:00:52+00:00",
+  "sources": {
+    "appdetails": "https://store.steampowered.com/api/appdetails?appids=1455840&l=english&cc=us",
+    "appreviews": null
+  },
+  "store_url": "https://store.steampowered.com/app/1455840/",
+  "details": {
+    "name": "Dorfromantik",
+    "short_description": "Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles. Explore a variety of colorful biomes, discover and unlock new tiles and complete quests to fill your world with life!",
+    "about_the_game": "Dorfromantik is a relaxing building strategy and puzzle game in which you place tiles to create ever-growing, idyllic village landscapes. With Dorfromantik, you can immerse yourself in a quiet, peaceful world at any time and take a break from everyday life. At the same time, Dorfromantik offers a challenge for those who are looking for one: To beat the highscore, you need to carefully plan and strategically place your tiles.\nIn Dorfromantik you start with a stack of procedurally generated tiles. One after the other, you draw the top tile of the stack, place it on one available slot and rotate for the best fit. Thereby groups and combinations of landscapes are formed, such as forests, villages or water bodies, and you are rewarded with points depending on how well the tile fits.\nOn some tiles you will also encounter special objects that give you a quest: For example, the windmill wants to border 6 grain fields, the locomotive wants to be connected to 10 tracks or the deer wants to inhabit a forest with at least 50 trees. Fulfill these quests to get more tiles to continue the expansion of your landscape. The game ends when the tile stack is used up.\nAs you expand the landscape, you can advance into new, colorful biomes and discover pre-placed game objects that give you long-term tasks. Through these tasks you can unlock new tiles, new biomes and new quests.\nWhat Dorfromantik offers\nBuilding endless and beautiful landscapes\nUnique mix of strategy and puzzle mechanics\nRelaxing and calming gameplay\nIdyllic village scenery\nStrategic placement to beat the highscore\nHigh replay value - every session is different\nMany unlockable tiles and biomes\nOriginal Artstyle with handpainted boardgame feel\nWhat Dorfromantik does not offer\n4X Strategy\nTrading\nResource Management\nCombat & Violence\nMultiplayer\nDorfromantik offers options for any style of play! Take a short break from life in quick mode or try to master the game in hard mode. The Custom Mode allows you to create your own rulesets and share them with others, while monthly mode awaits you with a new challenge every month. If you just want to relax and build your own landscape with no limits, try the creative mode!\nDorfromantik was developed by four game design students from Berlin. Together we have founded Toukana Interactive and want to develop many more small, original and high-quality indie games in the future.\nWe are happy about constructive feedback of all kinds, so feel free to contact us! We will do our best to respond to messages quickly and fix any problems that may arise. :)",
+    "developers": [
+      "Toukana Interactive"
+    ],
+    "publishers": [
+      "Toukana Interactive"
+    ],
+    "release_date": "Apr 28, 2022",
+    "is_free": false,
+    "price": "$13.99",
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "categories": [
+      "Single-player",
+      "Steam Achievements",
+      "Full controller support",
+      "Steam Trading Cards",
+      "Steam Cloud",
+      "Steam Leaderboards",
+      "Family Sharing"
+    ],
+    "platforms": [
+      "windows",
+      "mac"
+    ],
+    "metacritic": null,
+    "recommendations": 27576,
+    "dlc_count": 3
+  },
+  "reviews": null,
+  "reviews_note": "appreviews endpoint did not return data at retrieval time"
+}

@@ -1,0 +1,45 @@
+{
+  "appid": 1092790,
+  "retrieved_at": "2026-11-17T01:00:36+00:00",
+  "sources": {
+    "appdetails": "https://store.steampowered.com/api/appdetails?appids=1092790&l=english&cc=us",
+    "appreviews": null
+  },
+  "store_url": "https://store.steampowered.com/app/1092790/",
+  "details": {
+    "name": "Inscryption",
+    "short_description": "Inscryption is an inky black card-based odyssey that blends the deckbuilding roguelike, escape-room style puzzles, and psychological horror into a blood-laced smoothie. Darker still are the secrets inscrybed upon the cards...",
+    "about_the_game": "From the creator of Pony Island and The Hex comes the latest mind-melting, self-destructing love letter to video games. Inscryption is an inky black card-based odyssey that blends the deckbuilding roguelike, escape-room style puzzles, and psychological horror into a blood-laced smoothie. Darker still are the secrets inscribed upon the cards...\nIn Inscryption you will...\nAcquire a deck of woodland creature cards by draft, surgery, and self mutilation\nUnlock the secrets lurking behind the walls of Leshy's cabin\nEmbark on an unexpected and deeply disturbing odyssey",
+    "developers": [
+      "Daniel Mullins Games"
+    ],
+    "publishers": [
+      "Devolver Digital"
+    ],
+    "release_date": "Oct 19, 2021",
+    "is_free": false,
+    "price": "$19.99",
+    "genres": [
+      "Adventure",
+      "Indie",
+      "Strategy"
+    ],
+    "categories": [
+      "Single-player",
+      "Steam Achievements",
+      "Steam Trading Cards",
+      "Steam Cloud",
+      "Family Sharing"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "metacritic": 85,
+    "recommendations": 136534,
+    "dlc_count": 1
+  },
+  "reviews": null,
+  "reviews_note": "appreviews endpoint did not return data at retrieval time"
+}

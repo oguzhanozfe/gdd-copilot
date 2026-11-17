@@ -1,0 +1,64 @@
+{
+  "appid": 427520,
+  "retrieved_at": "2026-11-17T01:00:40+00:00",
+  "sources": {
+    "appdetails": "https://store.steampowered.com/api/appdetails?appids=427520&l=english&cc=us",
+    "appreviews": null
+  },
+  "store_url": "https://store.steampowered.com/app/427520/",
+  "details": {
+    "name": "Factorio",
+    "short_description": "Factorio is a game about building and creating automated factories to produce items of increasing complexity, within an infinite 2D world. Use your imagination to design your factory, combine simple elements into ingenious structures, and finally protect it from the creatures who don't really like you.",
+    "about_the_game": "Factorio is a game in which you build and maintain factories. You will be mining resources, researching technologies, building infrastructure, automating production and fighting enemies. In the beginning you will find yourself chopping trees, mining ores and crafting mechanical arms and transport belts by hand, but in short time you can become an industrial powerhouse, with huge solar fields, oil refining and cracking, manufacture and deployment of construction and logistic robots, all for your resource needs. However this heavy exploitation of the planet's resources does not sit nicely with the locals, so you will have to be prepared to defend yourself and your machine empire.\nJoin forces with other players in cooperative Multiplayer , create huge factories, collaborate and delegate tasks between you and your friends. Add mods to increase your enjoyment, from small tweak and helper mods to complete game overhauls, Factorio's ground-up Modding support has allowed content creators from around the world to design interesting and innovative features. While the core gameplay is in the form of the freeplay scenario, there are a range of interesting challenges in the form of Scenarios . If you don't find any maps or scenarios you enjoy, you can create your own with the in-game Map Editor , place down entities, enemies, and terrain in any way you like, and even add your own custom script to make for interesting gameplay.\nDiscount Disclaimer: We don't have any plans to take part in a sale or to reduce the price for the foreseeable future. What people say about Factorio\nNo other game in the history of gaming handles the logistics side of management simulator so perfectly. - Reddit\nI see conveyor belts when I close my eyes. I may have been binging Factorio lately. - Notch, Mojang\nFactorio is a super duper awesome game where we use conveyor belts to shoot aliens. - Zisteau, Youtube",
+    "developers": [
+      "Wube Software LTD."
+    ],
+    "publishers": [
+      "Wube Software LTD."
+    ],
+    "release_date": "Aug 14, 2020",
+    "is_free": false,
+    "price": "$35.00",
+    "genres": [
+      "Casual",
+      "Indie",
+      "Simulation",
+      "Strategy"
+    ],
+    "categories": [
+      "Single-player",
+      "Multi-player",
+      "Co-op",
+      "Online Co-op",
+      "LAN Co-op",
+      "Cross-Platform Multiplayer",
+      "Steam Achievements",
+      "Adjustable Text Size",
+      "Camera Comfort",
+      "Custom Volume Controls",
+      "Adjustable Difficulty",
+      "Playable without Timed Input",
+      "DualShock Controller Support",
+      "DualShock Controller Support",
+      "DualSense Controller Support",
+      "DualSense Controller Support",
+      "Save Anytime",
+      "Subtitle Options",
+      "Partial Controller Support",
+      "Steam Cloud",
+      "Includes level editor",
+      "Remote Play on Tablet",
+      "Family Sharing"
+    ],
+    "platforms": [
+      "windows",
+      "mac",
+      "linux"
+    ],
+    "metacritic": 90,
+    "recommendations": 197640,
+    "dlc_count": 3
+  },
+  "reviews": null,
+  "reviews_note": "appreviews endpoint did not return data at retrieval time"
+}

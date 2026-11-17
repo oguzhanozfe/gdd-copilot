@@ -1,0 +1,1266 @@
+{
+  "examples/ollama-qwen3.5-9b/gearhollow/gdd.raw.md": {
+    "planted": 64,
+    "caught": 56,
+    "catch_rate": 0.875,
+    "controls": 32,
+    "controls_false_flagged": 0,
+    "by_category": {
+      "control": {
+        "n": 32,
+        "flagged": 0,
+        "rate": 0.0
+      },
+      "uncited": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "fake_quote": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "bad_chunk": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "number_mismatch": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "entity_mismatch": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "off_topic": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "inversion": {
+        "n": 8,
+        "flagged": 0,
+        "rate": 0.0
+      },
+      "wrong_company": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      }
+    },
+    "rows": [
+      {
+        "category": "control",
+        "sentence": "Stardew Valley was developed by ConcernedApe. [[S413150-facts: \"Developer: ConcernedApe\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Stardew Valley was released on Feb 26, 2016. [[S413150-facts: \"Release date: Feb 26, 2016\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Stardew Valley has 905,384 Steam user recommendations. [[S413150-facts: \"Steam user recommendations: 905,384\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Stardew Valley was published by ConcernedApe. [[S413150-facts: \"Publisher: ConcernedApe\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Stardew Valley sold more than 2 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Stardew Valley includes a four-player online co-op mode. [[S413150-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Stardew Valley was developed by ConcernedApe. [[S413150-dev: \"Developer: ConcernedApe\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Stardew Valley has 1,810,768 Steam user recommendations. [[S413150-facts: \"Steam user recommendations: 905,384\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Factorio was developed by ConcernedApe. [[S413150-facts: \"Developer: ConcernedApe\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Stardew Valley lets players build and share custom levels with a full map editor. [[S413150-facts: \"Developer: ConcernedApe\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Stardew Valley does not run on windows. [[S413150-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Stardew Valley was published by Wube Software LTD. [[S413150-facts: \"Publisher: ConcernedApe\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Factorio was developed by Wube Software LTD.. [[S427520-facts: \"Developer: Wube Software LTD.\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Factorio was released on Aug 14, 2020. [[S427520-facts: \"Release date: Aug 14, 2020\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Factorio has 197,640 Steam user recommendations. [[S427520-facts: \"Steam user recommendations: 197,640\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Factorio was published by Wube Software LTD. [[S427520-facts: \"Publisher: Wube Software LTD.\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Factorio sold more than 3 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Factorio includes a four-player online co-op mode. [[S427520-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Factorio was developed by Wube Software LTD.. [[S427520-dev: \"Developer: Wube Software LTD.\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Factorio has 395,280 Steam user recommendations. [[S427520-facts: \"Steam user recommendations: 197,640\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Slay the Spire was developed by Wube Software LTD.. [[S427520-facts: \"Developer: Wube Software LTD.\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Factorio lets players build and share custom levels with a full map editor. [[S427520-facts: \"Developer: Wube Software LTD.\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Factorio does not run on windows. [[S427520-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Factorio was published by Mega Crit. [[S427520-facts: \"Publisher: Wube Software LTD.\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Slay the Spire was developed by Mega Crit. [[S646570-facts: \"Developer: Mega Crit\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Slay the Spire was released on Jan 23, 2019. [[S646570-facts: \"Release date: Jan 23, 2019\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Slay the Spire has 195,117 Steam user recommendations. [[S646570-facts: \"Steam user recommendations: 195,117\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Slay the Spire was published by Mega Crit. [[S646570-facts: \"Publisher: Mega Crit\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Slay the Spire sold more than 4 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Slay the Spire includes a four-player online co-op mode. [[S646570-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Slay the Spire was developed by Mega Crit. [[S646570-dev: \"Developer: Mega Crit\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Slay the Spire has 390,234 Steam user recommendations. [[S646570-facts: \"Steam user recommendations: 195,117\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Inscryption was developed by Mega Crit. [[S646570-facts: \"Developer: Mega Crit\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Slay the Spire lets players build and share custom levels with a full map editor. [[S646570-facts: \"Developer: Mega Crit\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Slay the Spire does not run on windows. [[S646570-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Slay the Spire was published by Devolver Digital. [[S646570-facts: \"Publisher: Mega Crit\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Inscryption was developed by Daniel Mullins Games. [[S1092790-facts: \"Developer: Daniel Mullins Games\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Inscryption was released on Oct 19, 2021. [[S1092790-facts: \"Release date: Oct 19, 2021\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Inscryption has 136,534 Steam user recommendations. [[S1092790-facts: \"Steam user recommendations: 136,534\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Inscryption was published by Devolver Digital. [[S1092790-facts: \"Publisher: Devolver Digital\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Inscryption sold more than 5 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Inscryption includes a four-player online co-op mode. [[S1092790-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Inscryption was developed by Daniel Mullins Games. [[S1092790-dev: \"Developer: Daniel Mullins Games\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Inscryption has 273,068 Steam user recommendations. [[S1092790-facts: \"Steam user recommendations: 136,534\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Monster Train was developed by Daniel Mullins Games. [[S1092790-facts: \"Developer: Daniel Mullins Games\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Inscryption lets players build and share custom levels with a full map editor. [[S1092790-facts: \"Developer: Daniel Mullins Games\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Inscryption does not run on windows. [[S1092790-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Inscryption was published by Good Shepherd Entertainment. [[S1092790-facts: \"Publisher: Devolver Digital\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Monster Train was developed by Shiny Shoe. [[S1102190-facts: \"Developer: Shiny Shoe\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Monster Train was released on May 21, 2020. [[S1102190-facts: \"Release date: May 21, 2020\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Monster Train has 19,999 Steam user recommendations. [[S1102190-facts: \"Steam user recommendations: 19,999\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Monster Train was published by Good Shepherd Entertainment. [[S1102190-facts: \"Publisher: Good Shepherd Entertainment\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Monster Train sold more than 6 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Monster Train includes a four-player online co-op mode. [[S1102190-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Monster Train was developed by Shiny Shoe. [[S1102190-dev: \"Developer: Shiny Shoe\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Monster Train has 39,998 Steam user recommendations. [[S1102190-facts: \"Steam user recommendations: 19,999\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "shapez was developed by Shiny Shoe. [[S1102190-facts: \"Developer: Shiny Shoe\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Monster Train lets players build and share custom levels with a full map editor. [[S1102190-facts: \"Developer: Shiny Shoe\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Monster Train does not run on windows. [[S1102190-facts: \"Platforms: windows\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Monster Train was published by tobspr Games. [[S1102190-facts: \"Publisher: Good Shepherd Entertainment\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "shapez was developed by Tobias Springer. [[S1318690-facts: \"Developer: Tobias Springer\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "shapez was released on Jun 7, 2020. [[S1318690-facts: \"Release date: Jun 7, 2020\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "shapez has 14,428 Steam user recommendations. [[S1318690-facts: \"Steam user recommendations: 14,428\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "shapez was published by tobspr Games. [[S1318690-facts: \"Publisher: tobspr Games\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "shapez sold more than 7 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "shapez includes a four-player online co-op mode. [[S1318690-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "shapez was developed by Tobias Springer. [[S1318690-dev: \"Developer: Tobias Springer\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "shapez has 28,856 Steam user recommendations. [[S1318690-facts: \"Steam user recommendations: 14,428\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Dorfromantik was developed by Tobias Springer. [[S1318690-facts: \"Developer: Tobias Springer\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "shapez lets players build and share custom levels with a full map editor. [[S1318690-facts: \"Developer: Tobias Springer\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "shapez does not run on windows. [[S1318690-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "shapez was published by Toukana Interactive. [[S1318690-facts: \"Publisher: tobspr Games\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Dorfromantik was developed by Toukana Interactive. [[S1455840-facts: \"Developer: Toukana Interactive\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Dorfromantik was released on Apr 28, 2022. [[S1455840-facts: \"Release date: Apr 28, 2022\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Dorfromantik has 27,576 Steam user recommendations. [[S1455840-facts: \"Steam user recommendations: 27,576\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Dorfromantik was published by Toukana Interactive. [[S1455840-facts: \"Publisher: Toukana Interactive\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Dorfromantik sold more than 8 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Dorfromantik includes a four-player online co-op mode. [[S1455840-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Dorfromantik was developed by Toukana Interactive. [[S1455840-dev: \"Developer: Toukana Interactive\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Dorfromantik has 55,152 Steam user recommendations. [[S1455840-facts: \"Steam user recommendations: 27,576\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Balatro was developed by Toukana Interactive. [[S1455840-facts: \"Developer: Toukana Interactive\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Dorfromantik lets players build and share custom levels with a full map editor. [[S1455840-facts: \"Developer: Toukana Interactive\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Dorfromantik does not run on windows. [[S1455840-facts: \"Platforms: windows, mac\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Dorfromantik was published by Playstack. [[S1455840-facts: \"Publisher: Toukana Interactive\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Balatro was developed by LocalThunk. [[S2379780-facts: \"Developer: LocalThunk\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Balatro was released on Feb 20, 2024. [[S2379780-facts: \"Release date: Feb 20, 2024\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Balatro has 163,218 Steam user recommendations. [[S2379780-facts: \"Steam user recommendations: 163,218\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Balatro was published by Playstack. [[S2379780-facts: \"Publisher: Playstack\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Balatro sold more than 9 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Balatro includes a four-player online co-op mode. [[S2379780-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Balatro was developed by LocalThunk. [[S2379780-dev: \"Developer: LocalThunk\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Balatro has 326,436 Steam user recommendations. [[S2379780-facts: \"Steam user recommendations: 163,218\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Stardew Valley was developed by LocalThunk. [[S2379780-facts: \"Developer: LocalThunk\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Balatro lets players build and share custom levels with a full map editor. [[S2379780-facts: \"Developer: LocalThunk\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Balatro does not run on windows. [[S2379780-facts: \"Platforms: windows, mac\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Balatro was published by ConcernedApe. [[S2379780-facts: \"Publisher: Playstack\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      }
+    ]
+  },
+  "examples/ollama-qwen3.5-9b/tidebound/gdd.raw.md": {
+    "planted": 64,
+    "caught": 56,
+    "catch_rate": 0.875,
+    "controls": 32,
+    "controls_false_flagged": 0,
+    "by_category": {
+      "control": {
+        "n": 32,
+        "flagged": 0,
+        "rate": 0.0
+      },
+      "uncited": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "fake_quote": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "bad_chunk": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "number_mismatch": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "entity_mismatch": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "off_topic": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      },
+      "inversion": {
+        "n": 8,
+        "flagged": 0,
+        "rate": 0.0
+      },
+      "wrong_company": {
+        "n": 8,
+        "flagged": 8,
+        "rate": 1.0
+      }
+    },
+    "rows": [
+      {
+        "category": "control",
+        "sentence": "Stardew Valley was developed by ConcernedApe. [[S413150-facts: \"Developer: ConcernedApe\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Stardew Valley was released on Feb 26, 2016. [[S413150-facts: \"Release date: Feb 26, 2016\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Stardew Valley has 905,384 Steam user recommendations. [[S413150-facts: \"Steam user recommendations: 905,384\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Stardew Valley was published by ConcernedApe. [[S413150-facts: \"Publisher: ConcernedApe\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Stardew Valley sold more than 2 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Stardew Valley includes a four-player online co-op mode. [[S413150-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Stardew Valley was developed by ConcernedApe. [[S413150-dev: \"Developer: ConcernedApe\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Stardew Valley has 1,810,768 Steam user recommendations. [[S413150-facts: \"Steam user recommendations: 905,384\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Factorio was developed by ConcernedApe. [[S413150-facts: \"Developer: ConcernedApe\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Stardew Valley lets players build and share custom levels with a full map editor. [[S413150-facts: \"Developer: ConcernedApe\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Stardew Valley does not run on windows. [[S413150-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Stardew Valley was published by Wube Software LTD. [[S413150-facts: \"Publisher: ConcernedApe\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Factorio was developed by Wube Software LTD.. [[S427520-facts: \"Developer: Wube Software LTD.\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Factorio was released on Aug 14, 2020. [[S427520-facts: \"Release date: Aug 14, 2020\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Factorio has 197,640 Steam user recommendations. [[S427520-facts: \"Steam user recommendations: 197,640\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Factorio was published by Wube Software LTD. [[S427520-facts: \"Publisher: Wube Software LTD.\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Factorio sold more than 3 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Factorio includes a four-player online co-op mode. [[S427520-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Factorio was developed by Wube Software LTD.. [[S427520-dev: \"Developer: Wube Software LTD.\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Factorio has 395,280 Steam user recommendations. [[S427520-facts: \"Steam user recommendations: 197,640\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Slay the Spire was developed by Wube Software LTD.. [[S427520-facts: \"Developer: Wube Software LTD.\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Factorio lets players build and share custom levels with a full map editor. [[S427520-facts: \"Developer: Wube Software LTD.\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Factorio does not run on windows. [[S427520-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Factorio was published by Mega Crit. [[S427520-facts: \"Publisher: Wube Software LTD.\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Slay the Spire was developed by Mega Crit. [[S646570-facts: \"Developer: Mega Crit\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Slay the Spire was released on Jan 23, 2019. [[S646570-facts: \"Release date: Jan 23, 2019\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Slay the Spire has 195,117 Steam user recommendations. [[S646570-facts: \"Steam user recommendations: 195,117\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Slay the Spire was published by Mega Crit. [[S646570-facts: \"Publisher: Mega Crit\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Slay the Spire sold more than 4 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Slay the Spire includes a four-player online co-op mode. [[S646570-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Slay the Spire was developed by Mega Crit. [[S646570-dev: \"Developer: Mega Crit\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Slay the Spire has 390,234 Steam user recommendations. [[S646570-facts: \"Steam user recommendations: 195,117\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Inscryption was developed by Mega Crit. [[S646570-facts: \"Developer: Mega Crit\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Slay the Spire lets players build and share custom levels with a full map editor. [[S646570-facts: \"Developer: Mega Crit\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Slay the Spire does not run on windows. [[S646570-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Slay the Spire was published by Devolver Digital. [[S646570-facts: \"Publisher: Mega Crit\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Inscryption was developed by Daniel Mullins Games. [[S1092790-facts: \"Developer: Daniel Mullins Games\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Inscryption was released on Oct 19, 2021. [[S1092790-facts: \"Release date: Oct 19, 2021\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Inscryption has 136,534 Steam user recommendations. [[S1092790-facts: \"Steam user recommendations: 136,534\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Inscryption was published by Devolver Digital. [[S1092790-facts: \"Publisher: Devolver Digital\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Inscryption sold more than 5 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Inscryption includes a four-player online co-op mode. [[S1092790-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Inscryption was developed by Daniel Mullins Games. [[S1092790-dev: \"Developer: Daniel Mullins Games\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Inscryption has 273,068 Steam user recommendations. [[S1092790-facts: \"Steam user recommendations: 136,534\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Monster Train was developed by Daniel Mullins Games. [[S1092790-facts: \"Developer: Daniel Mullins Games\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Inscryption lets players build and share custom levels with a full map editor. [[S1092790-facts: \"Developer: Daniel Mullins Games\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Inscryption does not run on windows. [[S1092790-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Inscryption was published by Good Shepherd Entertainment. [[S1092790-facts: \"Publisher: Devolver Digital\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Monster Train was developed by Shiny Shoe. [[S1102190-facts: \"Developer: Shiny Shoe\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Monster Train was released on May 21, 2020. [[S1102190-facts: \"Release date: May 21, 2020\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Monster Train has 19,999 Steam user recommendations. [[S1102190-facts: \"Steam user recommendations: 19,999\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Monster Train was published by Good Shepherd Entertainment. [[S1102190-facts: \"Publisher: Good Shepherd Entertainment\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Monster Train sold more than 6 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Monster Train includes a four-player online co-op mode. [[S1102190-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Monster Train was developed by Shiny Shoe. [[S1102190-dev: \"Developer: Shiny Shoe\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Monster Train has 39,998 Steam user recommendations. [[S1102190-facts: \"Steam user recommendations: 19,999\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "shapez was developed by Shiny Shoe. [[S1102190-facts: \"Developer: Shiny Shoe\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Monster Train lets players build and share custom levels with a full map editor. [[S1102190-facts: \"Developer: Shiny Shoe\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Monster Train does not run on windows. [[S1102190-facts: \"Platforms: windows\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Monster Train was published by tobspr Games. [[S1102190-facts: \"Publisher: Good Shepherd Entertainment\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "shapez was developed by Tobias Springer. [[S1318690-facts: \"Developer: Tobias Springer\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "shapez was released on Jun 7, 2020. [[S1318690-facts: \"Release date: Jun 7, 2020\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "shapez has 14,428 Steam user recommendations. [[S1318690-facts: \"Steam user recommendations: 14,428\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "shapez was published by tobspr Games. [[S1318690-facts: \"Publisher: tobspr Games\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "shapez sold more than 7 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "shapez includes a four-player online co-op mode. [[S1318690-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "shapez was developed by Tobias Springer. [[S1318690-dev: \"Developer: Tobias Springer\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "shapez has 28,856 Steam user recommendations. [[S1318690-facts: \"Steam user recommendations: 14,428\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Dorfromantik was developed by Tobias Springer. [[S1318690-facts: \"Developer: Tobias Springer\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "shapez lets players build and share custom levels with a full map editor. [[S1318690-facts: \"Developer: Tobias Springer\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "shapez does not run on windows. [[S1318690-facts: \"Platforms: windows, mac, linux\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "shapez was published by Toukana Interactive. [[S1318690-facts: \"Publisher: tobspr Games\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Dorfromantik was developed by Toukana Interactive. [[S1455840-facts: \"Developer: Toukana Interactive\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Dorfromantik was released on Apr 28, 2022. [[S1455840-facts: \"Release date: Apr 28, 2022\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Dorfromantik has 27,576 Steam user recommendations. [[S1455840-facts: \"Steam user recommendations: 27,576\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Dorfromantik was published by Toukana Interactive. [[S1455840-facts: \"Publisher: Toukana Interactive\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Dorfromantik sold more than 8 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Dorfromantik includes a four-player online co-op mode. [[S1455840-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Dorfromantik was developed by Toukana Interactive. [[S1455840-dev: \"Developer: Toukana Interactive\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Dorfromantik has 55,152 Steam user recommendations. [[S1455840-facts: \"Steam user recommendations: 27,576\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Balatro was developed by Toukana Interactive. [[S1455840-facts: \"Developer: Toukana Interactive\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Dorfromantik lets players build and share custom levels with a full map editor. [[S1455840-facts: \"Developer: Toukana Interactive\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Dorfromantik does not run on windows. [[S1455840-facts: \"Platforms: windows, mac\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Dorfromantik was published by Playstack. [[S1455840-facts: \"Publisher: Toukana Interactive\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "control",
+        "sentence": "Balatro was developed by LocalThunk. [[S2379780-facts: \"Developer: LocalThunk\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Balatro was released on Feb 20, 2024. [[S2379780-facts: \"Release date: Feb 20, 2024\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Balatro has 163,218 Steam user recommendations. [[S2379780-facts: \"Steam user recommendations: 163,218\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "control",
+        "sentence": "Balatro was published by Playstack. [[S2379780-facts: \"Publisher: Playstack\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "uncited",
+        "sentence": "Balatro sold more than 9 million copies in its first year.",
+        "status": "uncited",
+        "flagged": true
+      },
+      {
+        "category": "fake_quote",
+        "sentence": "Balatro includes a four-player online co-op mode. [[S2379780-facts: \"four-player online co-op mode\"]]",
+        "status": "quote_not_found",
+        "flagged": true
+      },
+      {
+        "category": "bad_chunk",
+        "sentence": "Balatro was developed by LocalThunk. [[S2379780-dev: \"Developer: LocalThunk\"]]",
+        "status": "bad_chunk",
+        "flagged": true
+      },
+      {
+        "category": "number_mismatch",
+        "sentence": "Balatro has 326,436 Steam user recommendations. [[S2379780-facts: \"Steam user recommendations: 163,218\"]]",
+        "status": "number_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "entity_mismatch",
+        "sentence": "Stardew Valley was developed by LocalThunk. [[S2379780-facts: \"Developer: LocalThunk\"]]",
+        "status": "entity_mismatch",
+        "flagged": true
+      },
+      {
+        "category": "off_topic",
+        "sentence": "Balatro lets players build and share custom levels with a full map editor. [[S2379780-facts: \"Developer: LocalThunk\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      },
+      {
+        "category": "inversion",
+        "sentence": "Balatro does not run on windows. [[S2379780-facts: \"Platforms: windows, mac\"]]",
+        "status": "supported",
+        "flagged": false
+      },
+      {
+        "category": "wrong_company",
+        "sentence": "Balatro was published by ConcernedApe. [[S2379780-facts: \"Publisher: Playstack\"]]",
+        "status": "low_overlap",
+        "flagged": true
+      }
+    ]
+  }
+}

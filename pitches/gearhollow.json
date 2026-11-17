@@ -1,0 +1,6 @@
+{
+  "title": "Gearhollow (example GDD)",
+  "pitch": "A cozy automation game for relaxed players. You restore a sleepy mountain village by building small clockwork factories that grow crops, mill flour and deliver goods, with no combat and no fail state.",
+  "refs": [427520, 1318690, 413150, 1455840],
+  "notes": ["corpus/notes/gearhollow.md"]
+}
