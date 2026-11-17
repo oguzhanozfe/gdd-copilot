@@ -6,14 +6,15 @@ blockquote{color:var(--muted);border-left:3px solid var(--line);margin:0;padding
 sup a{text-decoration:none;font-size:.75em}.proposal{color:#244b8a}.question{color:#6b4a00}
 .flag{background:var(--badbg);border-bottom:2px solid var(--bad)}.flag small{color:var(--bad);font-family:sans-serif}
 ol.sources{font-size:.85rem;color:var(--muted)}ol.sources q{color:var(--fg)}
-.legend{font:.8rem sans-serif;color:var(--muted)}
+.ok{background:#e8f5e9;border-bottom:2px solid #2e7d32}
+.legend,.summary{font:.8rem sans-serif;color:var(--muted)}.summary{font-size:.9rem;color:var(--fg)}
 @media print{body{margin:0;max-width:none;font-size:11pt}a{color:inherit}h2{break-after:avoid}li{break-inside:avoid}}
-</style></head><body><p class="legend">Blue = proposal (design opinion). Brown = open question. Red underline = claim the citation checker could not verify.</p><h1>Gearhollow (example GDD)</h1>
+</style></head><body><p class="legend">Green = claim whose quoted citation the checker verified. Red = claim it could not verify. Blue = proposal (design opinion). Brown = open question.</p><p class="summary"><b>Citation check:</b> 5 of 16 claims have valid citations (31%); 9 proposals, 11 open questions, 6 proposals/questions name a reference game without a quote.</p><h1>Gearhollow (example GDD)</h1>
 <h2>Pitch</h2>
 <blockquote>A cozy automation game for relaxed players. You restore a sleepy mountain village by building small clockwork factories that grow crops, mill flour and deliver goods, with no combat and no fail state.</blockquote>
 <h2>Core loop</h2>
 <ul>
-<li>The team explicitly wants no combat and no fail state so players should never lose a factory <sup><a href="#src1" title="The team wants no combat and no fail state; players should never lose a factory.">[1]</a></sup>.</li>
+<li><span class="ok" title="citation verified">The team explicitly wants no combat and no fail state so players should never lose a factory <sup><a href="#src1" title="The team wants no combat and no fail state; players should never lose a factory.">[1]</a></sup>.</span></li>
 <li><span class="proposal">Proposal: The core loop will focus on restoring a sleepy mountain village by building small clockwork factories that grow crops, mill flour, and deliver goods without any enemies or timers.</span></li>
 <li><span class="question">Open question: How can we implement optional wiring and logic to optimize the factory while keeping the experience low-stakes like shapez <sup><a href="#src2" title="Get creative with optional wiring &amp; logic to optimize your factory to your liking and maybe even make a powerful machine that can make every shape possible.">[2]</a></sup>.</span></li>
 <li><span class="proposal">Proposal: We will allow players to invite friends to join online and work together to build a thriving community, similar to how Stardew Valley supports multiplayer farming <sup><a href="#src3" title="8 Player Farming! Invite 1-7 players to join you in the valley online!">[3]</a></sup>.</span></li>
@@ -22,7 +23,7 @@ ol.sources{font-size:.85rem;color:var(--muted)}ol.sources q{color:var(--fg)}
 </ul>
 <h2>Target player</h2>
 <ul>
-<li>The team wants no combat and no fail state; players should never lose a factory <sup><a href="#src1" title="The team wants no combat and no fail state; players should never lose a factory.">[1]</a></sup></li>
+<li><span class="ok" title="citation verified">The team wants no combat and no fail state; players should never lose a factory <sup><a href="#src1" title="The team wants no combat and no fail state; players should never lose a factory.">[1]</a></sup></span></li>
 <li><span class="proposal">Proposal: The new game will focus on restoring a sleepy mountain village by building small clockwork factories that grow crops, mill flour, and deliver goods without any enemies or timers.</span></li>
 <li><span class="question">Open question: How can we implement optional wiring and logic to optimize the player&#x27;s factory while keeping the stakes low like shapez? <sup><a href="#src2" title="Get creative with optional wiring &amp; logic to optimize your factory to your liking and maybe even make a powerful machine that can make every shape possible.">[2]</a></sup></span></li>
 <li><span class="question">Open question: What is the best way to allow players to customize their home and character appearance with hundreds of decorative items similar to Stardew Valley? <sup><a href="#src5" title="Customize the appearance of your character and house. With hundreds of decorative items to choose from, you&#x27;ll have no trouble creating the home of your dreams!">[5]</a></sup></span></li>
@@ -59,10 +60,10 @@ ol.sources{font-size:.85rem;color:var(--muted)}ol.sources q{color:var(--fg)}
 <h2>Open questions</h2>
 <ul>
 <li><span class="proposal">Proposal: The core loop will focus on restoring a sleepy mountain village by building small clockwork factories that grow crops, mill flour, and deliver goods without any combat or fail state.</span></li>
-<li>Fact: shapez is an easy-going, minimalistic factory building game about the automation of shapes through extraction and satisfying production lines <sup><a href="#src8" title="shapez: shapez is an easy-going, minimalistic factory building game about the automation of shapes through extraction and satisfying production lines.">[8]</a></sup>.</li>
-<li>Fact: The team wants no combat and no fail state; players should never lose a factory <sup><a href="#src1" title="The team wants no combat and no fail state; players should never lose a factory.">[1]</a></sup>.</li>
+<li><span class="ok" title="citation verified">Fact: shapez is an easy-going, minimalistic factory building game about the automation of shapes through extraction and satisfying production lines <sup><a href="#src8" title="shapez: shapez is an easy-going, minimalistic factory building game about the automation of shapes through extraction and satisfying production lines.">[8]</a></sup>.</span></li>
+<li><span class="ok" title="citation verified">Fact: The team wants no combat and no fail state; players should never lose a factory <sup><a href="#src1" title="The team wants no combat and no fail state; players should never lose a factory.">[1]</a></sup>.</span></li>
 <li><span class="question">Open question: How can we implement optional wiring and logic to optimize the factory while maintaining the low-stakes nature of the game?</span></li>
-<li>Fact: Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles <sup><a href="#src9" title="Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles.">[9]</a></sup>.</li>
+<li><span class="ok" title="citation verified">Fact: Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles <sup><a href="#src9" title="Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles.">[9]</a></sup>.</span></li>
 <li><span class="question">Open question: What specific clockwork mechanisms should be introduced to allow players to customize their skills as they progress from a struggling greenhorn to a master artisan?</span></li>
 </ul>
 <p>&lt;!-- generated by gdd-copilot with qwen3.5:9b digest 56671c2ab938 on 2026-11-17 in 130s --&gt;</p><h2>Sources</h2><ol class="sources"><li id="src1"><code>N-gearhollow-4</code>: <q>The team wants no combat and no fail state; players should never lose a factory.</q> (User notes: gearhollow.md)</li>
@@ -73,4 +74,24 @@ ol.sources{font-size:.85rem;color:var(--muted)}ol.sources q{color:var(--fg)}
 <li id="src6"><code>S427520-about1</code>: <q>If you don&#x27;t find any maps or scenarios you enjoy, you can create your own with the in-game Map Editor , place down entities, enemies, and terrain in any way you like.</q> (Steam store page data: Factorio, <a href="https://store.steampowered.com/app/427520/">https://store.steampowered.com/app/427520/</a>, retrieved 2026-11-17)</li>
 <li id="src7"><code>S1318690-about1</code>: <q>Spread out across the infinite sandbox to acquire different shapes and increase production.</q> (Steam store page data: shapez, <a href="https://store.steampowered.com/app/1318690/">https://store.steampowered.com/app/1318690/</a>, retrieved 2026-11-17)</li>
 <li id="src8"><code>S1318690-short</code>: <q>shapez: shapez is an easy-going, minimalistic factory building game about the automation of shapes through extraction and satisfying production lines.</q> (Steam store page data: shapez, <a href="https://store.steampowered.com/app/1318690/">https://store.steampowered.com/app/1318690/</a>, retrieved 2026-11-17)</li>
-<li id="src9"><code>S1455840-short</code>: <q>Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles.</q> (Steam store page data: Dorfromantik, <a href="https://store.steampowered.com/app/1455840/">https://store.steampowered.com/app/1455840/</a>, retrieved 2026-11-17)</li></ol></body></html>
+<li id="src9"><code>S1455840-short</code>: <q>Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles.</q> (Steam store page data: Dorfromantik, <a href="https://store.steampowered.com/app/1455840/">https://store.steampowered.com/app/1455840/</a>, retrieved 2026-11-17)</li></ol><h2>Citation check</h2>
+<p class="summary"><b>Citation check:</b> 5 of 16 claims have valid citations (31%); 9 proposals, 11 open questions, 6 proposals/questions name a reference game without a quote.</p>
+<ul>
+<li>line 23 <b>quote_not_found</b> quote not in S1318690-about1: Open question: How do we balance the infinite sandbox expansion of shapez with the cozy progression of restoring a village without overwhelming the player?</li>
+<li>line 27 <b>missing_quote</b> citation without a quoted span: shapez is a low-stakes factory building game all about the automation of shapes production .</li>
+<li>line 28 <b>missing_quote</b> citation without a quoted span: Factorio is a game in which you build and maintain factories by mining resources and automating production .</li>
+<li>line 29 <b>missing_quote</b> citation without a quoted span: Stardew Valley allows players to invite 1-7 players to join them online to work together on a thriving farm .</li>
+<li>line 30 <b>warn_uncited_reference</b> names shapez without a quoted citation: Proposal: The new game will adopt the cozy, low-stakes philosophy of shapez where players can advance at their own pace without enemies or timers.</li>
+<li>line 31 <b>warn_uncited_reference</b> names Stardew Valley without a quoted citation: Open question: How can we implement a cooperative multiplayer mode for the mountain village that feels as relaxing as Stardew Valley&#x27;s farming mechanics?</li>
+<li>line 32 <b>missing_quote</b> citation without a quoted span: N-gearhollow notes that the team wants no combat and no fail state so players should never lose a factory .</li>
+<li>line 36 <b>missing_quote</b> citation without a quoted span: Shapez is a low-stakes factory building game all about the automation of shapes production .</li>
+<li>line 37 <b>warn_uncited_reference</b> names Stardew Valley without a quoted citation: Proposal: The new game will adopt a premium price point similar to Factorio&#x27;s $35.00 or Stardew Valley&#x27;s $14.99 rather than using microtransactions.</li>
+<li>line 39 <b>missing_quote</b> citation without a quoted span: Seasonal festivals in the village are planned as free content updates to maintain community engagement without charging extra .</li>
+<li>line 40 <b>missing_quote</b> citation without a quoted span: Factorio&#x27;s ground-up Modding support has allowed content creators from around the world to design interesting and innovative features .</li>
+<li>line 41 <b>missing_quote</b> citation without a quoted span: The team wants no combat and no fail state; players should never lose a factory .</li>
+<li>line 45 <b>missing_quote</b> citation without a quoted span: Factorio requires players to defend their machine empire from creatures who don&#x27;t really like you, which contradicts the pitch&#x27;s requirement for no combat .</li>
+<li>line 46 <b>warn_uncited_reference</b> names shapez without a quoted citation: Proposal: The new game will remove all enemy encounters and fail states to ensure a relaxing experience similar to shapez.</li>
+<li>line 48 <b>missing_quote</b> citation without a quoted span: Stardew Valley allows players to level up in five different areas including combat, which is an area we must avoid replicating .</li>
+<li>line 49 <b>warn_uncited_reference</b> names Dorfromantik without a quoted citation: Proposal: We will focus on creative mode mechanics where players can build their own landscape with no limits like Dorfromantik.</li>
+<li>line 50 <b>missing_quote</b> citation without a quoted span: The team has shipped one small puzzle game before, indicating they have experience with low-complexity projects .</li>
+</ul></body></html>

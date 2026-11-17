@@ -4,7 +4,7 @@ from __future__ import annotations
 import html
 import re
 
-from .check import CITE, Result, split_sentences
+from .check import CITE, Result, split_sentences, strip_cites, summarize
 from .corpus import Chunk
 
 CSS = """
@@ -15,7 +15,8 @@ blockquote{color:var(--muted);border-left:3px solid var(--line);margin:0;padding
 sup a{text-decoration:none;font-size:.75em}.proposal{color:#244b8a}.question{color:#6b4a00}
 .flag{background:var(--badbg);border-bottom:2px solid var(--bad)}.flag small{color:var(--bad);font-family:sans-serif}
 ol.sources{font-size:.85rem;color:var(--muted)}ol.sources q{color:var(--fg)}
-.legend{font:.8rem sans-serif;color:var(--muted)}
+.ok{background:#e8f5e9;border-bottom:2px solid #2e7d32}
+.legend,.summary{font:.8rem sans-serif;color:var(--muted)}.summary{font-size:.9rem;color:var(--fg)}
 @media print{body{margin:0;max-width:none;font-size:11pt}a{color:inherit}h2{break-after:avoid}li{break-inside:avoid}}
 """
 
@@ -44,6 +45,7 @@ def to_html(md: str, chunks: list[Chunk], results: list[Result], title: str) -> 
     index = {c.id: c for c in chunks}
     nums = _numbering(md)
     flagged = {(r.line, r.sentence): r for r in results if r.kind == "claim" and r.status != "supported"}
+    verified = {(r.line, r.sentence) for r in results if r.kind == "claim" and r.status == "supported"}
     esc = html.escape
 
     def sentence_html(s: str, line: int) -> str:
@@ -57,6 +59,8 @@ def to_html(md: str, chunks: list[Chunk], results: list[Result], title: str) -> 
         parts.append(esc(s[last:]))
         inner = "".join(parts)
         low = s.lower()
+        if (line, s) in verified:
+            return f'<span class="ok" title="citation verified">{inner}</span>'
         if (line, s) in flagged:
             r = flagged[(line, s)]
             return f'<span class="flag">{inner} <small>[{esc(r.status)}]</small></span>'
@@ -98,10 +102,21 @@ def to_html(md: str, chunks: list[Chunk], results: list[Result], title: str) -> 
         meta = (f'{esc(c.source)}, <a href="{esc(c.url)}">{esc(c.url)}</a>, retrieved {esc(c.retrieved)}'
                 if c and c.url.startswith("http") else esc(c.source) if c else "unknown source id")
         src.append(f'<li id="src{n}"><code>{esc(cid)}</code>: <q>{esc(quote)}</q> ({meta})</li>')
-    legend = ('<p class="legend">Blue = proposal (design opinion). Brown = open question. '
-              'Red underline = claim the citation checker could not verify.</p>')
+    legend = ('<p class="legend">Green = claim whose quoted citation the checker verified. '
+              'Red = claim it could not verify. Blue = proposal (design opinion). Brown = open question.</p>')
+    sm = summarize(results)
+    share = f" ({sm['valid_citation_share']:.0%})" if sm["claims"] else ""
+    summary = (f'<p class="summary"><b>Citation check:</b> {sm["supported"]} of {sm["claims"]} claims have '
+               f'valid citations{share}; {sm["proposals"]} proposals, {sm["questions"]} open questions, '
+               f'{sm["non_claim_warnings"]} proposals/questions name a reference game without a quote.</p>')
+    report = ['<h2>Citation check</h2>', summary, "<ul>"]
+    for r in results:
+        if (r.kind == "claim" and r.status != "supported") or (r.kind != "claim" and r.status not in ("n/a", "supported")):
+            report.append(f"<li>line {r.line} <b>{esc(r.status)}</b> {esc(r.detail)}: {esc(strip_cites(r.sentence))}</li>")
+    report.append("</ul>")
     return (f'<!doctype html><html lang="en"><head><meta charset="utf-8">'
             f'<meta name="viewport" content="width=device-width,initial-scale=1">'
             f"<title>{esc(title)}</title><style>{CSS}</style></head><body>"
-            + legend + "\n".join(body)
-            + '<h2>Sources</h2><ol class="sources">' + "\n".join(src) + "</ol></body></html>\n")
+            + legend + summary + "\n".join(body)
+            + '<h2>Sources</h2><ol class="sources">' + "\n".join(src) + "</ol>"
+            + "\n".join(report) + "</body></html>\n")

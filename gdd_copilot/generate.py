@@ -53,6 +53,36 @@ def provider() -> tuple[str, str]:
     return name, os.environ.get("GDD_MODEL", PROVIDERS[name][2])
 
 
+def ollama_has(model: str) -> bool:
+    """True if a local Ollama answers and has `model` pulled."""
+    host = os.environ.get("OLLAMA_HOST", "http://127.0.0.1:11434").rstrip("/")
+    try:
+        with urllib.request.urlopen(host + "/api/tags", timeout=3) as r:
+            return any(m["name"] == model for m in json.load(r)["models"])
+    except (OSError, ValueError, KeyError):
+        return False
+
+
+def resolve_mode() -> str:
+    """Demo order: GDD_PROVIDER if set; cloud key; local Ollama with the model; else 'replay'."""
+    if os.environ.get("GDD_PROVIDER"):
+        return os.environ["GDD_PROVIDER"]
+    for p in ("gemini", "deepseek"):
+        if os.environ.get(PROVIDERS[p][1]):
+            return p
+    return "ollama" if ollama_has(os.environ.get("GDD_MODEL", PROVIDERS["ollama"][2])) else "replay"
+
+
+def replay(folder: Path) -> Callable[[str, str], str]:
+    """An llm() that returns recorded responses, keyed like the section cache."""
+    def call(system: str, user: str) -> str:
+        f = folder / (hashlib.sha256((system + user).encode()).hexdigest()[:16] + ".txt")
+        if not f.exists():
+            raise KeyError(f"no recorded response {f.name} (pitch, corpus or prompt changed)")
+        return f.read_text()
+    return call
+
+
 def call_llm(system: str, user: str) -> str:
     name, model = provider()
     msgs = [{"role": "system", "content": system}, {"role": "user", "content": user}]

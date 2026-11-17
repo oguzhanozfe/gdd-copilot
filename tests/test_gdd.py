@@ -201,5 +201,32 @@ class BenchTests(unittest.TestCase):
             self.assertIn(cat, r["by_category"])
 
 
+class DemoTests(unittest.TestCase):
+    def test_keyless_resolves_to_replay(self):
+        import os
+        from unittest import mock
+        env = {k: v for k, v in os.environ.items() if k not in ("GDD_PROVIDER", "GEMINI_API_KEY", "DEEPSEEK_API_KEY")}
+        env["OLLAMA_HOST"] = "http://127.0.0.1:9"
+        with mock.patch.dict(os.environ, env, clear=True):
+            self.assertEqual(generate.resolve_mode(), "replay")
+
+    def test_replay_rebuilds_committed_example(self):
+        import os
+        from contextlib import redirect_stdout
+        from io import StringIO
+        from tempfile import TemporaryDirectory
+        from unittest import mock
+        from gdd_copilot import __main__ as cli
+        os.chdir(ROOT)
+        with TemporaryDirectory() as tmp, mock.patch.dict(os.environ, {"GDD_PROVIDER": "replay"}), \
+                redirect_stdout(StringIO()):
+            cli.main(["demo", "--out", tmp])
+            for name in ("tidebound", "gearhollow"):
+                got = (Path(tmp) / name / "gdd.raw.md").read_text()
+                want = (cli.RECORDED / name / "gdd.raw.md").read_text()
+                self.assertEqual(got, want)
+            self.assertIn("gdd.html", (Path(tmp) / "index.html").read_text())
+
+
 if __name__ == "__main__":
     unittest.main()

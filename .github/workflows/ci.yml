@@ -12,3 +12,7 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: python -m unittest discover -s tests -v
+      - name: Demo (no keys, no Ollama -> replay of recorded responses)
+        run: |
+          python -m gdd_copilot demo --out demo-out
+          for n in tidebound gearhollow; do diff demo-out/$n/gdd.raw.md examples/ollama-qwen3.5-9b/$n/gdd.raw.md; done

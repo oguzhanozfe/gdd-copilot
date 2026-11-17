@@ -1,0 +1,6 @@
+- Shapez is a low-stakes factory building game all about the automation of shapes production [[S1318690-about1]].
+- Proposal: The new game will adopt a premium price point similar to Factorio's $35.00 or Stardew Valley's $14.99 rather than using microtransactions.
+- Open question: Should the team release paid expansions given that N-gearhollow is currently undecided about this monetization strategy?
+- Seasonal festivals in the village are planned as free content updates to maintain community engagement without charging extra [[N-gearhollow-7]].
+- Factorio's ground-up Modding support has allowed content creators from around the world to design interesting and innovative features [[S427520-about1]].
+- The team wants no combat and no fail state; players should never lose a factory [[N-gearhollow-4]].

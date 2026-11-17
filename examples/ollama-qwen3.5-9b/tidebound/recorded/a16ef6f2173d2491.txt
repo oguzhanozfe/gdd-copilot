@@ -1,0 +1,6 @@
+- Slay the Spire was priced at $24.99 on the US store when it released on Jan 23, 2019. [[S646570-facts: "Price on the US store: $24.99"]]
+- Proposal: We will price Tidebound at $19.99 to match Inscryption's accessible indie strategy tier while maintaining high perceived value.
+- Open question: How many DLC expansions should we plan for given that Monster Train lists 2 DLCs and Balatro lists only 1?
+- The designer wants the tide mechanic to be the one thing reviewers remember because it changes which cards are playable every few turns. [[N-tidebound-7: "the board floods and drains every few turns, changing which cards are playable"]]
+- Proposal: We will include Steam Achievements and Steam Cloud support to align with standard features found in Slay the Spire and Monster Train.
+- Open question: Should we implement a Steam Workshop for user-generated tide mechanics or card sets like Slay the Spire offers?

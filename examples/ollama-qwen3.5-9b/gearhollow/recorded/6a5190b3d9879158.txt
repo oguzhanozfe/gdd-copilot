@@ -1,0 +1,6 @@
+- Factorio requires players to defend their machine empire from creatures who don't really like you, which contradicts the pitch's requirement for no combat [[S427520-about1: "fighting enemies" in Factorio]].
+- Proposal: The new game will remove all enemy encounters and fail states to ensure a relaxing experience similar to shapez.
+- Open question: How can we implement a progression system that feels rewarding without the pressure of combat or resource scarcity?
+- Stardew Valley allows players to level up in five different areas including combat, which is an area we must avoid replicating [[S413150-about2: "level up in 5 different areas: farming, mining, combat, fishing, and foraging" in Stardew Valley]].
+- Proposal: We will focus on creative mode mechanics where players can build their own landscape with no limits like Dorfromantik.
+- The team has shipped one small puzzle game before, indicating they have experience with low-complexity projects [[N-gearhollow-2: "shipped one small puzzle game before" in gearhollow.md]].

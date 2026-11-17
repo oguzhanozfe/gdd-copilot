@@ -1,0 +1,6 @@
+- The designer wants the tide mechanic to be the one thing reviewers remember: the board floods and drains every few turns, changing which cards are playable. [[N-tidebound-7: "the board floods and drains every few turns"]]
+- Proposal: We will focus on a single-player experience where players craft a unique deck to encounter bizarre creatures and discover relics of immense power.
+- Open question: How can we balance the dynamic tide mechanic with the need for deep stat tracking without overwhelming new players?
+- Proposal: The game should offer adjustable text sizes and full controller support to match the accessibility standards set by successful single-player deckbuilders. [[S646570-features: "Full controller support"]]
+- Open question: What is the optimal number of starter decks needed to provide variety without diluting the core tide-themed gameplay loop?
+- Proposal: We will include an in-depth stats screen allowing players to study their best hands and most used cards after every single run.

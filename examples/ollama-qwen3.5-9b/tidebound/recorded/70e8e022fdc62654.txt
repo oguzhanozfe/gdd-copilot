@@ -1,0 +1,5 @@
+- The designer wants the tide mechanic to be the one thing reviewers remember: the board floods and drains every few turns, changing which cards are playable [[N-tidebound-7]].
+- Proposal: We will focus on a single-player experience similar to Slay the Spire where we fused card games and roguelikes together to make the best single player deckbuilder we could [[S646570-short]].
+- Open question: Should we include multiplayer or PvP modes given that Monster Train offers Single-player, Multi-player, PvP, Online PvP options while our pitch emphasizes a single-player run? [[S1102190-features]]
+- Proposal: We will limit the launch scope to PC on Steam as Balatro allows players to immerse themselves in its distinctive psychedelic world and improve their collection with every single run [[N-tidebound-4]].
+- Open question: How do we balance the number of starter decks against the desire for a hypnotically satisfying deckbuilder where you play illegal poker hands and discover game-changing jokers? [[S2379780-short]]

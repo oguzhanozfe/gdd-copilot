@@ -1,0 +1,5 @@
+- The designer wants the tide mechanic to be the one thing reviewers remember: the board floods and drains every few turns, changing which cards are playable [[N-tidebound-7]].
+- Proposal: We must ensure our dynamic flooding system offers enough variety so players do not feel repetitive after multiple runs.
+- Open question: How many unique card interactions can we support before the deck-building depth feels shallow compared to Slay the Spire's 350+ fully implemented cards [[S646570-about3]].
+- Proposal: We should include a distinctive psychedelic world and synthwave soundtrack to help players enter an ultimate roguelike flow state like Balatro [[S2379780-about5]].
+- Open question: Can we implement the tide mechanic without requiring timed input, ensuring accessibility for players who use Playable without Timed Input options found in Slay the Spire [[S646570-features]].

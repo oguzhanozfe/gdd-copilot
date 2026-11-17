@@ -5,9 +5,25 @@ reference games or the market must cite a quoted span from a stored source, and 
 verifies each citation and flags the sentences it cannot verify. Design opinions are allowed,
 but they must be labelled `Proposal:`.
 
-Example output: [Tidebound GDD (Markdown)](examples/ollama-qwen3.5-9b/tidebound/gdd.md) ·
-[printable HTML](examples/ollama-qwen3.5-9b/tidebound/gdd.html) ·
-[citation check](examples/ollama-qwen3.5-9b/tidebound/check.md)
+## Try it
+
+**Live examples (no install):** <https://oguzhanozfe.github.io/gdd-copilot/>. Two generated GDDs as
+printable HTML, with verified claims in green, unverified claims in red and the citation-check report at
+the bottom of each page.
+
+[![Tidebound GDD with verified citations highlighted](docs/screenshot.png)](https://oguzhanozfe.github.io/gdd-copilot/tidebound/gdd.html)
+
+```bash
+python -m gdd_copilot demo        # no API key, no dependencies; writes demo-out/index.html
+```
+
+`demo` builds both bundled pitches from the committed Steam snapshots and runs the citation checker. It
+picks the model automatically: a cloud key in the environment (`GEMINI_API_KEY`, `DEEPSEEK_API_KEY`),
+else a local Ollama that has `qwen3.5:9b` (or `GDD_MODEL`), else **replay** of the recorded responses in
+`examples/ollama-qwen3.5-9b/*/recorded/`. It prints which one it used, e.g.
+`mode: replay (recorded qwen3.5:9b, 2026-11-17)`. If a live call fails (quota, timeout), that section is
+replayed and the run says so. Replay reproduces the committed `gdd.raw.md` files exactly, and CI checks that.
+Keys are optional; see [Run it](#run-it) to use a real model.
 
 ## Why
 
@@ -45,7 +61,8 @@ team notes (.md) ─┘   (per section)         └─ checker ─ check.md / ch
    question and has no citation is `uncited`. Proposals and questions that name a reference
    game without a quote get a warning.
 5. **Render** (`render.py`). Markdown with numbered sources (URL and retrieval date), and
-   print-ready HTML in which unverified claims are underlined in red.
+   print-ready HTML in which verified claims are green, unverified claims are red, and the
+   citation-check report is appended.
 
 ## Run it
 
@@ -53,6 +70,7 @@ Python 3.10+, no dependencies.
 
 ```bash
 python -m unittest discover -s tests -v                      # offline tests
+python -m gdd_copilot demo                                   # both pitches, best available model or replay
 python -m gdd_copilot check pitches/tidebound.json --out examples/ollama-qwen3.5-9b/tidebound   # re-check a committed GDD
 python -m gdd_copilot bench examples/ollama-qwen3.5-9b/*/gdd.raw.md                              # planted-claim benchmark (no model calls)
 ```
@@ -151,9 +169,10 @@ model errors.
 gdd_copilot/   fetch.py corpus.py generate.py check.py render.py bench.py __main__.py
 corpus/        steam/<appid>.json snapshots, notes/*.md
 pitches/       tidebound.json gearhollow.json
-examples/      ollama-qwen3.5-9b/<pitch>/{gdd.raw.md,gdd.md,gdd.html,check.md,check.json}
+examples/      ollama-qwen3.5-9b/<pitch>/{gdd.raw.md,gdd.md,gdd.html,check.md,check.json,recorded/}
                bench-planted-claims.json manual-audit.md
 tests/         offline unittest suite
+docs/          README screenshot (the Pages site is built by .github/workflows/pages.yml from `demo`)
 ```
 
 Steam data © its respective publishers, stored as short snapshots for citation. MIT licence

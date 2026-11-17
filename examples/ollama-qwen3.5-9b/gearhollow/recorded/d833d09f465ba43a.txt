@@ -1,0 +1,6 @@
+- Proposal: The core loop will focus on restoring a sleepy mountain village by building small clockwork factories that grow crops, mill flour, and deliver goods without any combat or fail state.
+- Fact: shapez is an easy-going, minimalistic factory building game about the automation of shapes through extraction and satisfying production lines [[S1318690-short: "shapez: shapez is an easy-going, minimalistic factory building game about the automation of shapes through extraction and satisfying production lines."]].
+- Fact: The team wants no combat and no fail state; players should never lose a factory [[N-gearhollow-4: "The team wants no combat and no fail state; players should never lose a factory."]].
+- Open question: How can we implement optional wiring and logic to optimize the factory while maintaining the low-stakes nature of the game?
+- Fact: Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles [[S1455840-short: "Dorfromantik is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles."]].
+- Open question: What specific clockwork mechanisms should be introduced to allow players to customize their skills as they progress from a struggling greenhorn to a master artisan?

@@ -1,0 +1,5 @@
+- The core loop must revolve around the tide mechanic where the board floods and drains every few turns, changing which cards are playable [[N-tidebound-7: "the board floods and drains every few turns, changing which cards are playable."]].
+- Proposal: Players will sail between islands to craft a unique deck of tide-themed cards that adapt to the shifting water levels.
+- Open question: How can we balance the flood/drain cycle so it doesn't disrupt the flow state described in similar games like Balatro? [[S2379780-about5: "prepare to enter the ultimate roguelike flow state."]].
+- Proposal: We will include over 220 cards across multiple starter decks to ensure no playthrough is ever the same as Monster Train does. [[S1102190-about3: "Over 220 cards, build up your deck from 10 different starterdecks."]].
+- Open question: Should we implement daily climbs or mysterious events like Slay the Spire to encourage replayability? [[S646570-about4: "50+ mysterious events that can help or harm you."]].
