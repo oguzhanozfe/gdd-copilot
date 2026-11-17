@@ -106,6 +106,8 @@ separate facts, and the checker can't tell the difference.
 the whole document. The run used 8 claims per category (one per reference game), planted
 into each of the two GDDs. It also plants 32 true, correctly cited control claims to measure
 false alarms. Source: [bench-planted-claims.json](examples/bench-planted-claims.json).
+The checker makes no model calls, so these rates don't depend on a model. The planted claims
+were inserted into the two `qwen3.5:9b` GDDs above, and both gave identical results.
 
 | Planted claim type | Example | Caught |
 | --- | --- | --- |
